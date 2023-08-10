@@ -1,4 +1,4 @@
-#include<stuio.h>
+#include<stdio.h>
 /**
  * main - writing the size for each variable
  * Description - this is a script to write the size of
