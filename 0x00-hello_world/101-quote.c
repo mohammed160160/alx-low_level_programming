@@ -1,5 +1,5 @@
 #include<unistd.h>
-/*
+/**
  * main - writing a string
  * Description - writing a string of text without printf
  * or puts
