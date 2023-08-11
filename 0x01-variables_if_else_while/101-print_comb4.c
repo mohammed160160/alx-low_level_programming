@@ -27,7 +27,7 @@ int main(void)
 	putchar(',');
 	putchar(' ');
 	}
-	z++
+	z++;
 	}
 	y++;
 	}
