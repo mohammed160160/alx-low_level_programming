@@ -15,7 +15,7 @@ int main(void)
 	putchar(x);
 	x++;
 	}
-	y = write(1, "\n", 1);
-	putchar(x + y);
+	y = write(1, ""ch"\n", 27);
+	putchar(y);
 	return (0);
 }
