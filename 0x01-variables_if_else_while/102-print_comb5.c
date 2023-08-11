@@ -25,9 +25,9 @@ int main(void)
 	putchar(',');
 	putchar(' ');
 	}
-	x++;
-	}
 	y++;
+	}
+	x++;
 	}
 	putchar('\n');
 	return (0);
