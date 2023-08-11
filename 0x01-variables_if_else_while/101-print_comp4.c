@@ -1,30 +1,37 @@
 #include <stdio.h>
 /**
- * main -  writing unique 2 digits
- * Description - creating a program that write each unique 2
+ * main -  writing unique 3 digits
+ * Description - creating a program that write each unique 3
  * digit values
  * Return: 0
  */
 int main(void)
 {
-	int i = 0;
-	int j;
+	int x = 0;
+	int y;
+	int z;
 
-	while (i < 10)
+	while (x < 10)
 	{
-	j = i + 1;
-	while (j < 10)
+	y = x + 1;
+	while (y < 10)
 	{
-	putchar(i + '0');
-	putchar(j + '0');
-	if (i != 8 || j != 9)
+	z = x + 1;
+	while (z < 10)
+	{
+	putchar(x + '0');
+	putchar(y + '0');
+	putchar(z + '0');
+	if (x != 7 || y != 8 || z != 9)
 	{
 	putchar(',');
 	putchar(' ');
 	}
-	j++;
+	z++
 	}
-	i++;
+	y++;
+	}
+	x++;
 	}
 	putchar('\n');
 	return (0);
