@@ -13,6 +13,5 @@ int main(void)
 	putchar(ch);
 	ch++;
 	}
-	putchar(ch + "\n");
 	return (0);
 }
