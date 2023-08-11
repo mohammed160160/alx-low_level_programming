@@ -16,12 +16,12 @@ int main(void)
 	y = 0;
 	while (y < 9)
 	{
-	if (x != y)
+	if (y != x)
 	{
 	z = 0;
 	while (z < 10)
 	{
-	if (x != z && y != z)
+	if (z != x && z != y)
 	{
 	putchar(x + '0');
 	putchar(y + '0');
