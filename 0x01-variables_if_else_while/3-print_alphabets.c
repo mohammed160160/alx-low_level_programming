@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <unistd.h>
 /**
  * main - to print from a to z then A to Z
  * Description - this is a program to type from a to z and from A to Z
