@@ -8,14 +8,11 @@
 int main(void)
 {
 	char x = 'a';
-	int y;
 
 	while (x <= 'z')
 	{
 	putchar(x);
 	x++;
 	}
-	y = write(1, ""ch"\n", 27);
-	putchar(y);
 	return (0);
 }
