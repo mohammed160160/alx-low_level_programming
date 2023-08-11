@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include <time.h>
+#include <stdio.h>
 /**
  * main -for printing if n is positive, negative or zero
  * Description -this is an if function that that defines if n is
