@@ -7,22 +7,17 @@
  */
 int main(void)
 {
-	int x;
+	int x = 0;
 	int y;
 	int z;
 
-	x = 0;
 	while (x < 8)
 	{
-	y = 0;
+	y = x + 1;
 	while (y < 9)
 	{
-	if (y != x)
-	{
-	z = 0;
+	z = x + 1;
 	while (z < 10)
-	{
-	if (z != x && z != y)
 	{
 	putchar(x + '0');
 	putchar(y + '0');
@@ -32,9 +27,7 @@ int main(void)
 	putchar(',');
 	putchar(' ');
 	}
-	}
 	z++;
-	}
 	}
 	y++;
 	}
