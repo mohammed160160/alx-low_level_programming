@@ -13,5 +13,6 @@ int main(void)
 	putchar(ch);
 	ch++;
 	}
+	putchar("ch");
 	return (0);
 }
