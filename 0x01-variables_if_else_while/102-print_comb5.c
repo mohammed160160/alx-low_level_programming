@@ -10,7 +10,7 @@ int main(void)
 	int i = '0';
 	int j;
 
-	while (i <= '98')
+	while (i <= 98)
 	{
 	j = i + 1;
 	while (j <= 99)
