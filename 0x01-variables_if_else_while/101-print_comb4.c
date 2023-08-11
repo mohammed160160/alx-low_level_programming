@@ -8,18 +8,18 @@
 int main(void)
 {
 	int x = 0;
-	int y;
-	int z;
+	int y = 0;
+	int z = 0;
 
-	while (x < 10)
+	while (x < 8)
 	{
-	y = x + 1;
-	while (y < 10)
+	while (y < 9)
 	{
-	z = x + 2;
+	if (x != y)
+	{
 	while (z < 10)
 	{
-	if (x != y && x != z && y != z)
+	if (x != z && y != z)
 	{
 	putchar(x + '0');
 	putchar(y + '0');
@@ -31,6 +31,7 @@ int main(void)
 	}
 	}
 	z++;
+	}
 	}
 	y++;
 	}
