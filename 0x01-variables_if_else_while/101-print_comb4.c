@@ -8,15 +8,17 @@
 int main(void)
 {
 	int x = 0;
-	int y = 0;
-	int z = 0;
+	int y;
+	int z;
 
 	while (x < 8)
 	{
+	y = 0;
 	while (y < 9)
 	{
 	if (x != y)
 	{
+	z = 0;
 	while (z < 10)
 	{
 	if (x != z && y != z)
