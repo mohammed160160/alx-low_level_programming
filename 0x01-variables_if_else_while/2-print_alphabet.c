@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <unistd.h>
 /**
  * main - to print from a to z
  * Description - this is a program to type from a to z
@@ -6,12 +7,15 @@
  */
 int main(void)
 {
-	char ch = 'a';
+	char x = 'a';
+	int y;
 
-	while (ch <= 'z')
+	while (x <= 'z')
 	{
-	putchar(ch);
-	ch++;
+	putchar(x);
+	x++;
 	}
+	y = write(1, "\n", 1);
+	putchar(x + y);
 	return (0);
 }
