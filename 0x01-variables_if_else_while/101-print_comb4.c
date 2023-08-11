@@ -7,10 +7,11 @@
  */
 int main(void)
 {
-	int x = 0;
+	int x;
 	int y;
 	int z;
 
+	x = 0;
 	while (x < 8)
 	{
 	y = 0;
