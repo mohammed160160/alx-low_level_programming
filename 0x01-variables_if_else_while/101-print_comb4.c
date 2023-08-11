@@ -13,10 +13,10 @@ int main(void)
 
 	while (x < 8)
 	{
-	y = 0;
+	y = 1;
 	while (y < 9)
 	{
-	z = 0;
+	z = 2;
 	while (z < 10)
 	{
 	if (z != x && z != y && y != x)
