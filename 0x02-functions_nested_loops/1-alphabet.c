@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * main - types smallcase alphabet
  * Return: Always 0.
@@ -11,10 +10,10 @@ void print_alphabet(void);
 
 	while (x <= 122)
 	{
-	putchar(x)
-	x++
+	putchar(x);
+	x++;
 	}
-	putchar('\n')
+	putchar('\n');
 	return (0);
 	}
 
