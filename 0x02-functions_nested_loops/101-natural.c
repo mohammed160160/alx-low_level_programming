@@ -17,4 +17,6 @@ if (x % 3 == 0 || x % 5 == 0)
 t = t + x;
 }
 }
-printf("%li\n", t);
+printf("%i\n", t);
+return (0);
+}
