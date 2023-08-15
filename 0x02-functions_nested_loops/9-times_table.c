@@ -1,8 +1,7 @@
 #include "main.h"
 
 /**
- * main - check the code
- *
+ * times_table - writes the time table from 0 to 9
  * Return: Always 0.
  */
 
@@ -35,9 +34,3 @@ void times_table(void)
 	}
 	return;
 	}
-
-int main(void)
-{
-	times_table();
-	return (0);
-}
