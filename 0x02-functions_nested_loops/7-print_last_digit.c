@@ -12,10 +12,9 @@ int print_last_digit(int n)
 	int lsls;
 
 	ls = n % 10;
-	lsls = ls * 11;
 	if (n < 0)
 	{
-	return (-lsls);
+	return (-ls-ls);
 	}
 	else
 	{
