@@ -1,10 +1,9 @@
 #include "main.h"
 /**
  * main - print the time from 00:00 to 23:59
- *
+ * Description - writes the time from start to finish
  * Return: Always 0.
  */
-
 void jack_bauer(void)
 	{
 	int m;
