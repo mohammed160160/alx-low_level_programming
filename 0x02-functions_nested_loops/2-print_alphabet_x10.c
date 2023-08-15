@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * main - to write the alphabet from a to z
+ * print_alphabet_x10 - to write the alphabet from a to z
  *
  * Return: Always 0.
  */
@@ -13,7 +13,7 @@ void print_alphabet_x10(void)
 
 	for (y = 0; y <= 9; y++)
 	{
-	x = 97;	
+	x = 97;
 	while (x <= 122)
 	{
 	_putchar(x);
@@ -22,10 +22,4 @@ void print_alphabet_x10(void)
 	_putchar('\n');
 	}
 	return;
-	}
-
-int main(void)
-	{
-	print_alphabet_x10();
-	return (0);
 	}
