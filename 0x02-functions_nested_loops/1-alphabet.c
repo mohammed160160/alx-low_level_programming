@@ -6,16 +6,16 @@
  * Return: Always 0.
  */
 
-void print_alphabet(void)
+void print_alphabet(void);
 	{
 	int x = 97;
 
 	while (x <= 122)
 	{
-	_putchar(x);
+	putchar(x);
 	x++;
 	}
-	_putchar('\n');
+	putchar('\n');
 	return;
 	}
 
