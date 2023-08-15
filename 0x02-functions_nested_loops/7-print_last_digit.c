@@ -9,13 +9,16 @@
 int print_last_digit(int n)
 	{
 	int ls;
+	int lsls;
+
 	ls = n % 10;
+	lsls = ls * 11;
 	if (n < 0)
 	{
-	return (-ls);
+	return (-lsls);
 	}
 	else
 	{
-	return (ls);
+	return (lsls);
 	}
 	}
