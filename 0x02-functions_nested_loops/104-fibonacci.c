@@ -1,3 +1,4 @@
+#include<stdio.h>
 /**
  * main - writes the first 98 values of fibonacci sequence
  * Return: 0
