@@ -6,9 +6,9 @@
 int main(void)
 {
 int x;
-unsigned long int t;
-unsigned long int pt;
-unsigned long int ppt;
+double long t;
+double long pt;
+double long ppt;
 
 t = 0;
 pt = 1;
@@ -17,7 +17,7 @@ ppt = 0;
 for (x = 0; x <= 97; x++)
 {
 t = ppt + pt;
-printf("%lu", t);
+printf("%.0f", t);
 ppt = pt;
 pt = t;
 if (x != 97)
