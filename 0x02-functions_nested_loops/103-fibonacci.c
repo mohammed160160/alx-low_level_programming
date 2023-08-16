@@ -1,10 +1,10 @@
 /**
- * main - writes the first 50 values of fibonacci sequence
+ * main - writes the sum of all even fibonacci numbers till 4000000
  * Return: 0
  */
 int main(void)
 {
-int x;
+double x;
 double t;
 double pt;
 double ppt;
@@ -12,18 +12,20 @@ double ppt;
 t = 0;
 pt = 1;
 ppt = 0;
+x = 0;
 
-for (x = 0; x <= 49; x++)
+while (t < 4000000)
 {
 t = ppt + pt;
 printf("%.0f", t);
 ppt = pt;
 pt = t;
-if (x != 49)
+if ( t/2 == 0)
 {
-printf(", ");
+x = x + t;
 }
 }
-printf("\n");
+
+printf("%.0f\n", x);
 return (0);
 }
