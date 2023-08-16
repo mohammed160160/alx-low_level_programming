@@ -28,7 +28,7 @@ for (x = 0; x <= 5; x++)
 {
 v1 += p1;
 v2 += p2;
-if (v2 > lx)
+if (v2 >= lx)
 {
 v2 = v2 % lx;
 v1++;
