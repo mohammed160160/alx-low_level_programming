@@ -14,13 +14,13 @@ t = 0;
 pt = 0;
 ppt = 1;
 
-for (x = 0; x <= 50; x++)
+for (x = 0; x <= 49; x++)
 {
 t = ppt + pt;
-printf("%.0f ,", t);
+printf("%.0f, ", t);
 ppt = pt;
 pt = t;
 }
-printf("\n");
+printf("%.0f, ", t);
 return (0);
 }
