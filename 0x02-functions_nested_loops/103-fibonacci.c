@@ -5,10 +5,10 @@
  */
 int main(void)
 {
-double x;
-double t;
-double pt;
-double ppt;
+long int x;
+long int t;
+long int pt;
+long int ppt;
 
 t = 0;
 pt = 1;
@@ -26,6 +26,6 @@ x = x + t;
 }
 }
 
-printf("%.0f\n", t);
+printf("%li\n", t);
 return (0);
 }
