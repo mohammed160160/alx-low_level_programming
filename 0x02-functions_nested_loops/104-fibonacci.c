@@ -29,7 +29,7 @@ for (x = 92; x <= 97; x++)
 {
 ta = p1 + v1;
 tb = p2 + v2;
-if (t2 >= lx)
+if (tb >= lx)
 {
 ta++;
 tb = tb % lx;
