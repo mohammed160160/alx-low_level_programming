@@ -6,43 +6,21 @@
 int main(void)
 {
 int x;
-unsigned long t;
-unsigned long pt;
-unsigned long ppt;
-unsigned long pta;
-unsigned long ptb;
-unsigned long ppta;
-unsigned long pptb;
-unsigned long l = 1000000000;
+unsigned long v;
+unsigned long p;
 
 
-t = 0;
-pt = 1;
-ppt = 0;
+v = 1;
+p = 0;
 
-for (x = 0; x <= 92; x++)
+for (x = 0; x <= 99; x++)
 {
-t = ppt + pt;
-printf("%lu", t);
-ppt = pt;
-pt = t;
+v += pv;
+printf("%lu", v);
+p = v - p;
 printf(", ");
 }
 
-pta = pt / l;
-ptb = pt % l;
-ppta = ppt / l;
-pptb = ppt % l;
-
-for (x = 93; x <= 97; x++)
-{
-printf(", %lu", ppta + (pptb / l));
-printf("%lu", pptb);
-ppta = ppta + pta;
-pta = ppta - pta;
-pptb = pptb + ptb;
-ptb = pptb - ptb;
-}
 printf("\n");
 return (0);
 }
