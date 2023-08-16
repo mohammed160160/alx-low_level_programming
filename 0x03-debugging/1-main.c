@@ -13,7 +13,7 @@ i = 0;
 while (i < 10)
 {
 putchar(i);
-i++
+i++;
 }
 printf("Infinite loop avoided! \\o/\n");
 return (0);
