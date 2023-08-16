@@ -37,7 +37,7 @@ pptb = ppt % l;
 for (x = 93; x <= 97; x++)
 {
 printf(", %lu", ppta + (pptb / l));
-printf("%lu", pptb % l);
+printf("%lu", pptb);
 ppta = ppta + pta;
 pta = ppta - pta;
 pptb = pptb + ptb;
