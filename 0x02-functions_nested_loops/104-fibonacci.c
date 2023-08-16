@@ -34,10 +34,11 @@ ta = ta + 1;
 tb = tb - lx;
 }
 printf("%lu%lu", ta, tb);
-p1 = v1 - p1;
-p2 = v2 - p2;
-v1 = ta;
-v2 = tb;
+
+pa = ta - va;
+pb = vb - pb;
+va = ta;
+vb = tb;
 if (x != 97)
 {
 printf(", ");
