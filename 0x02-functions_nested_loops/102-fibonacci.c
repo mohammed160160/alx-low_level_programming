@@ -18,7 +18,7 @@ for (x = 1; x <= 50; x++)
 {
 
 t = ppt + pt;
-printf("%lli ,", t);
+printf("%li ,", t);
 ppt = pt;
 pt = t;
 }
