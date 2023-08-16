@@ -21,6 +21,6 @@ printf("%.0f, ", t);
 ppt = pt;
 pt = t;
 }
-printf("%.0f+%.0f", ppt, pt);
+printf("%.0f+%.0f\n", ppt, pt);
 return (0);
 }
