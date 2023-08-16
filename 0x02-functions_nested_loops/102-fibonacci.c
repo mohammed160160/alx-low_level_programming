@@ -11,8 +11,8 @@ double pt;
 double ppt;
 
 t = 0;
-pt = 0;
-ppt = 1;
+pt = 1;
+ppt = 0;
 
 for (x = 0; x <= 49; x++)
 {
@@ -21,6 +21,6 @@ printf("%.0f, ", t);
 ppt = pt;
 pt = t;
 }
-printf("%.0f, ", t);
+printf("%.0f", t);
 return (0);
 }
