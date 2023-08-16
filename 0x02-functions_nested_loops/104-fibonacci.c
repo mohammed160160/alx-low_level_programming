@@ -7,12 +7,9 @@ int main(void)
 {
 int x;
 unsigned long l;
+unsigned long v1, v2, p1, p2;
 unsigned long v;
-unsigned long v1;
-unsigned long v2;
 unsigned long p;
-unsigned long p1;
-unsigned long p2;
 unsigned long lx;
 
 l = 1000000000000;
@@ -29,7 +26,6 @@ v2 = v % l;
 p1 = p / l;
 p2 = p % l;
 lx = l * 10;
-
 for (x = 0; x <= 5; x++)
 {
 v1 += p1;
