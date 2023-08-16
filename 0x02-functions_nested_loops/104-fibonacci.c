@@ -11,6 +11,7 @@ unsigned long v1, v2, p1, p2;
 unsigned long v, p;
 
 l = 1000000000000;
+lx = 10000000000000;
 v = 1;
 p = 0;
 for (x = 0; x <= 91; x++)
@@ -23,7 +24,6 @@ v1 = v / l;
 v2 = v % l;
 p1 = p / l;
 p2 = p % l;
-lx = l * 10;
 for (x = 0; x <= 5; x++)
 {
 v1 += p1;
