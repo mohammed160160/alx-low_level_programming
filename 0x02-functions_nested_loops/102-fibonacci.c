@@ -20,7 +20,7 @@ t = ppt + pt;
 printf("%.0f, ", t);
 ppt = pt;
 pt = t;
-if (x =! 49)
+if (x != 49)
 {
 printf(", ");
 }
