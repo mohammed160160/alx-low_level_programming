@@ -32,7 +32,7 @@ tb = p2 + v2;
 if (tb >= lx)
 {
 ta++;
-tb = tb % lx;
+tb = tb - lx;
 } 
 printf("%lu%lu", ta, tb);
 p1 = v1 - p1;
