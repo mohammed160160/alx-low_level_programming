@@ -6,13 +6,13 @@
 int main(void)
 {
 int x;
+unsigned long l;
 unsigned long v;
 unsigned long v1 = v / l;
 unsigned long v2 = v % l;
 unsigned long p;
 unsigned long p1 = p / l;
 unsigned long p2 = p % l;
-unsigned long l;
 unsigned long lx;
 
 l = 1000000000000;
