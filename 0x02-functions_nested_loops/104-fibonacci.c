@@ -6,11 +6,9 @@
 int main(void)
 {
 int x;
-unsigned long l;
+unsigned long l, lx;
 unsigned long v1, v2, p1, p2;
-unsigned long v;
-unsigned long p;
-unsigned long lx;
+unsigned long v, p;
 
 l = 1000000000000;
 v = 1;
