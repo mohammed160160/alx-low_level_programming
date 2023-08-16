@@ -18,10 +18,9 @@ x = 0;
 while (t < 4000000)
 {
 t = ppt + pt;
-printf("%.0f", t);
 ppt = pt;
 pt = t;
-if ( t/2 == 0)
+if (t / 2 == 0)
 {
 x = x + t;
 }
