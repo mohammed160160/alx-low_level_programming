@@ -8,14 +8,18 @@ int main(void)
 int x;
 int t;
 int pt;
+int ppt;
 
 t = 0;
-pt = 1;
+pt = 0;
+ppt = 1;
 
 for (x = 1; x <= 50; x++)
 {
-t = t + pt;
+
+t = ppt + pt;
 printf("%i ,", t);
+ppt = pt;
 pt = t;
 }
 printf("\n");
