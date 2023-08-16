@@ -6,9 +6,9 @@
 int main(void)
 {
 int x;
-double t;
-double pt;
-double ppt;
+int t;
+int pt;
+int ppt;
 
 t = 0;
 pt = 1;
@@ -17,7 +17,7 @@ ppt = 0;
 for (x = 0; x <= 97; x++)
 {
 t = ppt + pt;
-printf("%.0f", t);
+printf("%d", t);
 ppt = pt;
 pt = t;
 if (x != 97)
