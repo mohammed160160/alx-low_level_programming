@@ -46,7 +46,7 @@ p1 = v1 - p1;
 p2 = v2 - p2;
 if (x != 5)
 {
-printf(", ")
+printf(", ");
 }
 }
 printf("\n");
