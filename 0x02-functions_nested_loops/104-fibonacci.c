@@ -6,12 +6,11 @@
 int main(void)
 {
 int x;
-unsigned long l, lx;
+unsigned long l ;
 unsigned long v1, v2, p1, p2;
 unsigned long v, p;
 
 l = 1000000000;
-lx = 10000000000;
 v = 1;
 p = 0;
 for (x = 0; x <= 91; x++)
@@ -27,10 +26,10 @@ p2 = p % l;
 for (x = 0; x <= 5; x++)
 {
 v1 += p1;
-if (v2 + p2 >= lx)
+if (v2 + p2 >= 10000000000)
 {
 v2 = v2 + p2;
-v2 = v2 - lx;
+v2 = v2 - 10000000000;
 v1++;
 }
 else 
