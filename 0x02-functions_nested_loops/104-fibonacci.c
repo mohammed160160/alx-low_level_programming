@@ -15,7 +15,7 @@ p = 0;
 
 for (x = 0; x <= 99; x++)
 {
-v += pv;
+v += p;
 printf("%lu", v);
 p = v - p;
 printf(", ");
