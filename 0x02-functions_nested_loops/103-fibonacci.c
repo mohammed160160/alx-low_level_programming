@@ -20,7 +20,7 @@ while (t < 4000000)
 t = ppt + pt;
 ppt = pt;
 pt = t;
-if (t / 2 == 0)
+if (t % 2 == 0)
 {
 x = x + t;
 }
