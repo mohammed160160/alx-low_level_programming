@@ -5,10 +5,10 @@
  */
 int main(void)
 {
-int x;
-int t;
-int pt;
-int ppt;
+long int x;
+long int t;
+long int pt;
+long int ppt;
 
 t = 0;
 pt = 0;
@@ -18,7 +18,7 @@ for (x = 1; x <= 50; x++)
 {
 
 t = ppt + pt;
-printf("%i ,", t);
+printf("%li ,", t);
 ppt = pt;
 pt = t;
 }
