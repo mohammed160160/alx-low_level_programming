@@ -13,7 +13,7 @@ unsigned long p;
 v = 1;
 p = 0;
 
-for (x = 0; x <= 99; x++)
+for (x = 0; x <= 91; x++)
 {
 v += p;
 printf("%lu", v);
