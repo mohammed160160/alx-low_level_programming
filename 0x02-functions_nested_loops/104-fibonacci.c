@@ -35,7 +35,7 @@ for (x = 0; x <= 5; x++)
 {
 v1 += p1;
 v2 += p2;
-printf("%lu%lu", v1, v2)
+printf("%lu%lu", v1, v2);
 p1 = v1 - p1;
 p2 = v2 - p2;
 }
