@@ -6,11 +6,12 @@
 int main(void)
 {
 int x;
-unsigned long l ;
+unsigned long l, lx ;
 unsigned long v1, v2, p1, p2;
 unsigned long v, p;
 
 l = 100000000;
+lx = 1000000000;
 v = 1;
 p = 0;
 for (x = 0; x <= 91; x++)
@@ -26,16 +27,13 @@ p2 = p % l;
 for (x = 0; x <= 5; x++)
 {
 v1 += p1;
-if (v2 + p2 >= 1000000000)
+v2 += p2;
+if (v2 + p2 >= lx)
 {
-v2 = v2 + p2;
-v2 = v2 % l * 10;
+v2 = v2 % lx;
 v1++;
 }
 else 
-{
-v2 = v2 + p2;
-}
 printf("%lu%lu", v1, v2);
 p1 = v1 - p1;
 p2 = v2 - p2;
