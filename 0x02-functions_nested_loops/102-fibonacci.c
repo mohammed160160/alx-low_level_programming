@@ -10,13 +10,13 @@ int t;
 int pt;
 
 t = 0;
-tp = 1;
+pt = 1;
 
 for (x = 1; x <= 50; x++)
 {
-t = t + tp;
+t = t + pt;
 printf("%i ,", t);
-tp = t
+pt = t
 }
 printf("\n");
 return (0);
