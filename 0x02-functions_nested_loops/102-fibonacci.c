@@ -7,13 +7,16 @@ int main(void)
 {
 int x;
 int t;
+int pt;
 
 t = 0;
+tp = 1;
 
 for (x = 1; x <= 50; x++)
 {
-t = t + x;
+t = t + tp;
 printf("%i ,", t);
+tp = t
 }
 printf("\n");
 return (0);
