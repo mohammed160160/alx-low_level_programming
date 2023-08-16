@@ -17,7 +17,7 @@ ppt = 0;
 for (x = 0; x <= 97; x++)
 {
 t = ppt + pt;
-printf("%.Lf", t);
+printf("%0.Lf", t);
 ppt = pt;
 pt = t;
 if (x != 97)
