@@ -26,6 +26,6 @@ x = x + t;
 }
 }
 
-printf("%li\n", t);
+printf("%li\n", x);
 return (0);
 }
