@@ -7,7 +7,7 @@ int main(void)
 {
 int x;
 unsigned long l, lx;
-unsigned long v1, v2, p1, p2, ta, tb;
+unsigned long va, vb, pa, pb, ta, tb;
 unsigned long v, p;
 
 l = 100000000;
@@ -20,17 +20,17 @@ v += p;
 printf("%lu, ", v);
 p = v - p;
 }
-v1 = v / l;
-v2 = v % l;
-p1 = p / l;
-p2 = p % l;
+va = v / l;
+vb = v % l;
+pa = p / l;
+pb = p % l;
 for (x = 92; x <= 97; x++)
 {
-ta = p1 + v1;
-tb = p2 + v2;
+ta = pa + va;
+tb = pb + vb;
 if (tb >= lx)
 {
-ta++;
+ta = ta + 1;
 tb = tb - lx;
 }
 printf("%lu%lu", ta, tb);
@@ -38,7 +38,7 @@ p1 = v1 - p1;
 p2 = v2 - p2;
 v1 = ta;
 v2 = tb;
-if (x != 5)
+if (x != 97)
 {
 printf(", ");
 }
