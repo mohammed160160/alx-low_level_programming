@@ -34,7 +34,6 @@ ta = ta + 1;
 tb = tb - lx;
 }
 printf("%lu%lu", ta, tb);
-
 pa = ta - va;
 pb = vb - pb;
 va = ta;
