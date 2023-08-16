@@ -7,11 +7,11 @@ int main(void)
 {
 int x;
 unsigned long v;
-unsigned long v1;
-unsigned long v2;
+unsigned long v1 = v / l;
+unsigned long v2 = v % l;
 unsigned long p;
-unsigned long p1;
-unsigned long p2;
+unsigned long p1 = p / l;
+unsigned long p2 = p % l;
 unsigned long l;
 unsigned long lx;
 
@@ -26,10 +26,6 @@ printf("%lu, ", v);
 p = v - p;
 }
 
-v1 = v / l;
-v2 = v % l;
-p1 = p / l;
-p2 = p % l;
 lx = l * 10;
 
 for (x = 0; x <= 5; x++)
