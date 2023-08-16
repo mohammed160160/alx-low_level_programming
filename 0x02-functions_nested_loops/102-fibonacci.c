@@ -14,9 +14,8 @@ t = 0;
 pt = 0;
 ppt = 1;
 
-for (x = 1; x <= 50; x++)
+for (x = 0; x <= 50; x++)
 {
-
 t = ppt + pt;
 printf("%.0f ,", t);
 ppt = pt;
