@@ -13,6 +13,7 @@ unsigned long p;
 unsigned long p1;
 unsigned long p2;
 unsigned long l;
+unsigned long lx;
 
 l = 1000000000000;
 v = 1;
@@ -29,17 +30,25 @@ v1 = v / l;
 v2 = v % l;
 p1 = p / l;
 p2 = p % l;
+lx = l * 10;
 
 for (x = 0; x <= 5; x++)
 {
 v1 += p1;
 v2 += p2;
-printf("%lu%lu, ", v1, v2);
+if (v2 > lx)
+{
+v2 = v2 - lx;
+v1 = v1 + 1;
+}
+printf("%lu%lu", v1, v2);
 p1 = v1 - p1;
 p2 = v2 - p2;
+if (x != 5)
+{
+printf(", ")
 }
-
-
+}
 printf("\n");
 return (0);
 }
