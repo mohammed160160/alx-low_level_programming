@@ -21,9 +21,8 @@ p = 0;
 for (x = 0; x <= 91; x++)
 {
 v += p;
-printf("%lu", v);
+printf("%lu, ", v);
 p = v - p;
-printf(", ");
 }
 
 v1 = v / l;
@@ -35,10 +34,12 @@ for (x = 0; x <= 5; x++)
 {
 v1 += p1;
 v2 += p2;
-printf("%lu%lu", v1, v2);
+printf("%lu%lu, ", v1, v2);
 p1 = v1 - p1;
 p2 = v2 - p2;
 }
+
+
 printf("\n");
 return (0);
 }
