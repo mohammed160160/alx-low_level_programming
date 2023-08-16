@@ -30,7 +30,7 @@ v1 += p1;
 v2 += p2;
 if (v2 >= lx)
 {
-v2 = v2 % lx;
+v2 = v2 - lx;
 v1++;
 }
 printf("%lu%lu", v1, v2);
