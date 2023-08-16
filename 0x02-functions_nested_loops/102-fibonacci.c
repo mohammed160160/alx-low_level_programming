@@ -6,9 +6,9 @@
 int main(void)
 {
 int x;
-double int t;
-double int pt;
-double int ppt;
+double t;
+double pt;
+double ppt;
 
 t = 0;
 pt = 0;
@@ -18,7 +18,7 @@ for (x = 1; x <= 50; x++)
 {
 
 t = ppt + pt;
-printf("%i ,", t);
+printf("%d ,", t);
 ppt = pt;
 pt = t;
 }
