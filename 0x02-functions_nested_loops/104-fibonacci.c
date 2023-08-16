@@ -5,7 +5,7 @@
  */
 int main(void)
 {
-unsigned long int x;
+int x;
 unsigned long int t;
 unsigned long int pt;
 unsigned long int ppt;
