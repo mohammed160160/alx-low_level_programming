@@ -8,12 +8,17 @@
 int main(void)
 {
 int i;
+
 printf("Infinite loop incoming :(\n");
+
 i = 0;
+
 while (i < 10)
 {
-i++;
+putchar(i);/*there should be an increment value here*/
 }
+
 printf("Infinite loop avoided! \\o/\n");
+
 return (0);
 }
