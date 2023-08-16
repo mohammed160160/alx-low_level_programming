@@ -32,7 +32,7 @@ printf(", ");
 pta = pt / l;
 ptb = pt % l;
 ppta = ppt / l;
-pptb = pptb % l;
+pptb = ppt % l;
 
 for (x = 93; x <= 97; x++)
 {
