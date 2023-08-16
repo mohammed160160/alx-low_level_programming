@@ -16,7 +16,7 @@ for (x = 1; x <= 50; x++)
 {
 t = t + pt;
 printf("%i ,", t);
-pt = t
+pt = t;
 }
 printf("\n");
 return (0);
