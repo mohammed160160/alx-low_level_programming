@@ -5,10 +5,10 @@
  */
 int main(void)
 {
-long long int x;
-long long int t;
-long long int pt;
-long long int ppt;
+long int x;
+long int t;
+long int pt;
+long int ppt;
 
 t = 0;
 pt = 0;
