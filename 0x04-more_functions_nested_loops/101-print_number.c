@@ -13,8 +13,8 @@ l = n;
 
 if (n < 0)
 {
-_putchar(45)
-l = -l
+_putchar(45);
+l = -l;
 }
 
 _putchar(l / 10 + '0');
