@@ -41,7 +41,7 @@ y = y % x;
 x = x / 10;
 }
 
-_putchar(n + '0');
+_putchar(y + '0');
 
 return;
 }
