@@ -7,18 +7,35 @@
 
 void print_number(int n)
 {
-int l;
+int x;
 
-l = n;
+x = 10000000;
 
 if (n < 0)
 {
 _putchar(45);
-l = -l;
+n = -n;
 }
 
-_putchar(l / 10 + '0');
-_putchar(l % 10 + '0');
+if (n == 0)
+{
+_putchar(0 + '0');
+return;
+}
+
+while (n / x == 0)
+{
+x = x / 10;
+}
+
+while (x != 1)
+{
+_putchar(n / x + '0');
+n = n % x;
+x = x / 10;
+}
+
+putchar(n + '0');
 
 return;
 }
