@@ -35,7 +35,7 @@ n = n % x;
 x = x / 10;
 }
 
-putchar(n + '0');
+_putchar(n + '0');
 
 return;
 }
