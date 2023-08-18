@@ -9,7 +9,7 @@ void print_number(int n)
 {
 int x;
 
-x = 10000000000;
+x = 1000000000;
 
 if (n < 0)
 {
