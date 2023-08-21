@@ -19,6 +19,7 @@ while (s[x] != 0)
 y++;
 x++;
 }
+y -= 1;
 while (s[y] != 0)
 {
 _putchar(s[y]);
