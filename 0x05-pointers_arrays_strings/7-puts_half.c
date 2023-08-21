@@ -19,7 +19,16 @@ while (str[x] != 0)
 y++;
 x++;
 }
+
+if (y % 2 == 0)
+{
+x = (y - 1) / 2;
+}
+else
+{
 x = y / 2;
+}
+
 while (str[x] != 0)
 {
 _putchar(str[x]);
