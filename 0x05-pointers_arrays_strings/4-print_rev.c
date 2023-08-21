@@ -27,4 +27,4 @@ _putchar(s[y]);
 }
 _putchar('\n');
 return;
-}	
+}
