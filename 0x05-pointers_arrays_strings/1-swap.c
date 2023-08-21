@@ -2,12 +2,15 @@
 #include <stdio.h>
 
 /**
- * main - check the code
- * @*a:
- * @*b:
- * Return: Always 0.
+ * main - swap the value of 2 integers
+ * @a:pointer that defines int a value
+ * @b:pointer that holds int b value
+ * Return: Null
  */
+
 void swap_int(int *a, int *b)
 {
+
+
 return;
 }
