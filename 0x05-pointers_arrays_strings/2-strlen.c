@@ -13,10 +13,10 @@ int x;
 
 x = 0;
 y = 0;
-while (s[x] != 0)	
+while (s[x] != 0)
 {
 y++;
 x++;
 }
-return(y);
+return (y);
 }
