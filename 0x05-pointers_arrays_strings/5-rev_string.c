@@ -2,8 +2,9 @@
 #include <stdio.h>
 
 /**
- * main - check the code
- * Return: Always 0.
+ * rev_string - Prints a string in reverse
+ * @s: The string that is required to reverse
+ * Return: Null
  */
 void rev_string(char *s)
 {

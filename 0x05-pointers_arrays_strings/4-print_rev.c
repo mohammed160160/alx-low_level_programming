@@ -2,10 +2,28 @@
 #include <stdio.h>
 
 /**
- * main - check the code
- * Return: Always 0.
+ * print_rev - Prints a string in reverse
+ * @s: The string the is printed in reverse
+ * Return: Null
  */
 void print_rev(char *s)
 {
-return;
+int x;
+int y;
+
+x = 0;
+y = 0;
+
+while (s[x] != 0)
+{
+y++;
+x++;
 }
+while (s[y] != 0)
+{
+_putchar(s[y]);
+--y;
+}
+_putchar('\n');
+return;
+}	
