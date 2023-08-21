@@ -10,6 +10,9 @@ void rev_string(char *s)
 {
 int x;
 int y;
+int hy;
+char sa;
+char sb;
 
 x = 0;
 y = 0;
@@ -19,11 +22,16 @@ while (s[x] != 0)
 y++;
 x++;
 }
-y -= 1;
-while (s[y] != 0)
+
+hy = y / 2;
+y = y - 1;
+
+for (x = 0; x <= hy; x++)
 {
-_putchar(s[y]);
---y;
+sa = s[0 + x];
+sb = s[y - x];
+s[0 + x] = sb;
+s[y - x] = sa;
 }
 _putchar('\n');
 return;
