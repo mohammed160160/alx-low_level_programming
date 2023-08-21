@@ -2,10 +2,12 @@
 #include <stdio.h>
 
 /**
- * main - check the code
- * @*s:
- * Return: Always 0.
+ * _strlen - determain the length of a string
+ * @s:The pointer to the string
+ * Return: Null
  */
 int _strlen(char *s)
 {
+strlen(*s);
+return;
 }
