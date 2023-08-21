@@ -2,10 +2,29 @@
 #include <stdio.h>
 
 /**
- * main - check the code
- * Return: Always 0.
+ * puts_half - prints out the second half of a string
+ * @str: the string the function is working on
+ * Return: Null
  */
 void puts_half(char *str)
 {
+int x;
+int y;
 
+x = 0;
+y = 0;
+
+while (str[x] != 0)
+{
+y++;
+x++;
+}
+x = y / 2;
+while (str[x] != 0)
+{
+_putchar(str[x]);
+++x;
+}
+_putchar('\n');
+return;
 }
