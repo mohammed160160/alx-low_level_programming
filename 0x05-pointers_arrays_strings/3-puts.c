@@ -2,11 +2,19 @@
 #include <stdio.h>
 
 /**
- * main - check the code
- * @*str:
- * Return: Always 0.
+ * _puts - prints out a string
+ * @str: the string wanting to be printed
+ * Return: Null
  */
 void _puts(char *str)
 {
+int x;
+
+x = 0;
+while (s[x] != 0)
+{
+_putchar(s[x] + '0');
+x++;
+}
 return;
 }
