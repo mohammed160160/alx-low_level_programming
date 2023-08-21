@@ -33,6 +33,5 @@ sb = s[y - x];
 s[0 + x] = sb;
 s[y - x] = sa;
 }
-_putchar('\n');
 return;
 }
