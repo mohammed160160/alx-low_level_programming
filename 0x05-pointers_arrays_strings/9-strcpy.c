@@ -7,5 +7,16 @@
  */
 char *_strcpy(char *dest, char *src)
 {
+int x;
+int y;
+
+x = 0;
+y = 0;
+
+while (s[x] != 0)
+{
+y++;
+x++;
+}
 
 }
