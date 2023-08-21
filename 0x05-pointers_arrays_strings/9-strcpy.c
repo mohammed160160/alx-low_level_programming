@@ -2,8 +2,11 @@
 #include <stdio.h>
 
 /**
- * main - check the code
- * Return: Always 0.
+ * *_strcpy - copies the string in the pointer src to the buffer
+ * pointed to by dest
+ * @src: The original string Location
+ * @dest: The Location of the copy of the string
+ * Return: The pointer to dest
  */
 char *_strcpy(char *dest, char *src)
 {
@@ -13,10 +16,16 @@ int y;
 x = 0;
 y = 0;
 
-while (s[x] != 0)
+while (src[x] != 0)
 {
 y++;
 x++;
 }
 
+for (x = 0; x <= y; x++)
+{
+dest[x] = src[x];
+}
+
+return (dest);
 }
