@@ -26,7 +26,7 @@ x++;
 hy = y / 2;
 y = y - 1;
 
-for (x = 0; x <= hy; x++)
+for (x = 0; x < hy; x++)
 {
 sa = s[0 + x];
 sb = s[y - x];
