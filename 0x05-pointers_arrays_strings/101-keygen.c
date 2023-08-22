@@ -21,7 +21,6 @@ srand(time(NULL));
 	pw[i] = rand() % 78;
 	s += pw[i] + '0';
 	putchar(pw[i] + '0');
-	}
 		if ((2772 - s) - '0' < 78)
 		{
 		n = 2772 - s - '0';
@@ -29,5 +28,6 @@ srand(time(NULL));
 		putchar(n + '0');
 		break;
 		}
+	}	
 return (0);
 }
