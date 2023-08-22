@@ -3,20 +3,28 @@
 #include <time.h>
 
 /**
- * main - creates a passord for crackme file
+ * main - creates a password for crackme file
  * Return: 0
  */
 
 int main(void)
 {
-int i;
+	int pw[64], i, s = 0, n;
 
-char password[100];
-srand(time(0));
-	for (i = 0; i < 100; i++)
+	srand(time(NULL));
+	for (i = 0; i < 64; i++)
 	{
-		password[i] = rand() % 94 + 33;
+		pw[i] = rand() % 78;
+		s += pw[i] + '0';
+		putchar(pw[i] + '0');
+
+		if ((2772 - s) - '0' < 78)
+		{
+			n = 2772 - s - '0';
+			s += n;
+			putchar(n + '0');
+			break;
+		}
 	}
-printf("%s\n", password);
-return (0);
+	return (0);
 }
