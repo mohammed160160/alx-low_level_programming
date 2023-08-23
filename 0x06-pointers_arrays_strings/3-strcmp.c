@@ -14,12 +14,19 @@ int x;
 int d;
 
 x = 0;
-while (s1[x] == s2[x])
+while (s1[x] == s2[x] && (s1[x] || s2[x] != '\0'))
 {
 x++;
 }
 
+if ((s1[x] && s2[x]) == '\0')
+{
+d = 0;
+}
+else
+{
 d = s1[x] - s2[x];
+}
 
 return (d);
 }
