@@ -30,9 +30,9 @@ ld++;
 
 for (x = 0; x < n; x++)
 {
-dest[x] = src [x];
+dest[x] = src[x];
 }
 
 
-return(dest);
+return (dest);
 }

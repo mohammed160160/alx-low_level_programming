@@ -30,8 +30,8 @@ ld++;
 
 for (x = ls; x < ls + ld; x++)
 {
-src[ls+x] = dest[x];
+src[ls + x] = dest[x];
 }
 
-return(src);
+return (dest);
 }
