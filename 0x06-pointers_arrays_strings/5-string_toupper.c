@@ -2,19 +2,26 @@
 #include <stdio.h>
 
 /**
- * reset_to_98 - updating the value of a pointer to 98
- * @n: The pointer that is used
+ * *string_toupper - turns any small letter in a string into a capital
+ * @'': The pointer to the string
  * Return: Null
  */
 
 
 char *string_toupper(char *)
 {
+int x;
+
+for (x = 0; ''[x] != '\0'; x++)
+{
+if (''[x] >= 'a' && ''[x] <= 'z')
+{
+''[x] -= 32;
+}
+}
 
 
-
-
-
+}
 
 
 
