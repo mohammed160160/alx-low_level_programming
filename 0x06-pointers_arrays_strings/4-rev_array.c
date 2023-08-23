@@ -22,8 +22,8 @@ n = n - 1;
 for (x = 0; x < y; x++)
 {
 s = a[x];
-a[x] = a[n-x];
-a[n-x] = s;
+a[x] = a[n - x];
+a[n - x] = s;
 }
 
 return;
