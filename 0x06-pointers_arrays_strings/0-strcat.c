@@ -11,26 +11,23 @@
 
 char *_strcat(char *dest, char *src)
 {
-int ld;
-int ls;
+int l;
 int x;
 
-ls = 0;
-ld = 0;
+l = 0;
 
-for (x = 0; src[x] != '\0'; x++)
-{
-ls++;
-}
 
 for (x = 0; dest[x] != '\0'; x++)
 {
-ld++;
+l++;
 }
 
-for (x = ls; x < ls + ld; x++)
+x = 0;
+
+while (src[x] != '\0')
 {
-src[ls + x] = dest[x];
+dest[l + x] = src[x];
+x++;
 }
 
 return (dest);
