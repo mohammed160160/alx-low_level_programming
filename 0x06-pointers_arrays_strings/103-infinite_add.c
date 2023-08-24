@@ -40,7 +40,7 @@ return (0);
 x = bigl;
 while (x != 0)
 {
-r[x] = r [x - 1] + r[x - 1] + c;
+r[x] = n1 [x - 1] + n2[x - 1] + c;
 if (r[x] >= 10 && x != 1)
 {
 r[x] -= 10;
