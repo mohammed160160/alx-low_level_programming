@@ -15,10 +15,10 @@ x = 0;
 
 while (str[x] != '\0')
 {
-if (str[x] == ' ' || str[x] == '\n' || str[x] == '\t' || str[x] == ',' ||
-str[x] == ';' || str[x] == '.' || str[x] == '!' || str[x] == '?' ||
-str[x] == '"' || str[x] == '(' || str[x] == ')' || str[x] == '{' ||
-str[x] == '}')
+if (str[x] == ' ' || str[x] == '\n' || str[x] == '\t' || str[x] == ','
+|| str[x] == ';' || str[x] == '.' || str[x] == '!' || str[x] == '?'
+|| str[x] == '"' || str[x] == '(' || str[x] == ')' || str[x] == '{'
+|| str[x] == '}')
 
 {
 
