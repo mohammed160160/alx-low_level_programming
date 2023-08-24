@@ -37,9 +37,7 @@ if (size_r <= bigl + 1)
 {
 return (0);
 }
-
 x = bigl;
-
 while (x != 0)
 {
 r[x] = r [x - 1] + r[x - 1] + c;
