@@ -3,26 +3,26 @@
 
 /**
  * *string_toupper - turns any small letter in a string into a capital
- * @'': The pointer to the string
+ * @s: The pointer to the string
  * Return: The pointer
  */
 
 
-char *string_toupper(char *)
+char *string_toupper(char *s)
 {
 int x;
 
 x = 0;
 
-while (''[x] != '\0')
+while (s[x] != '\0')
 {
-	if (''[x] >= 'a' && ''[x] <= 'z')
+	if (s[x] >= 'a' && s[x] <= 'z')
 	{
-	''[x] -= 32;
+	s[x] -= 32;
 	x++;
 	}
 }
-return ('');
+return (s);
 }
 
 
