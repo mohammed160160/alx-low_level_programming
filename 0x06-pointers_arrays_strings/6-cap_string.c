@@ -16,13 +16,16 @@ char si[13] = " \t\n,;.!?\"(){}";
 x = 0;
 while (str[x] != '\0')
 {
+if (str[x] >= 'a' && str[x] <= 'z')
+{
 	for (y = 0; y < 13; y++)
 	{
-	if (str[x] == si[y] && (str[x + 1] >= 'a' && str[x + 1] <= 'z'))
+		if (str[x - 1] == si[y])
 		{
-		str[x + 1] -= 32;
+		str[x] -= 32;
 		}
 	}
+}
 x++;
 }
 return (str);
