@@ -11,16 +11,16 @@ char *cap_string(char *str)
 {
 int x;
 int y;
-char si[14] = " \t\n,;.!?\"(){}";
+char si[13] = " \t\n,;.!?\"(){}";
 
 x = 0;
 while (str[x] != '\0')
 {
-if (str[x] >= 'a' && str[x] <= 'z')
+if (str[x] >= 'a' && str[x] <= 'z' && x != 0)
 {
 	for (y = 0; y < 13; y++)
 	{
-		if (si[y] == str[x - 1] || x == 0 )
+		if (si[y] == str[x - 1])
 		{
 		str[x] -= 32;
 		}
