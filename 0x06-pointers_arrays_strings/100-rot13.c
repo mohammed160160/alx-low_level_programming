@@ -23,6 +23,7 @@ while (str[x] != '\0')
 		if (str[x] == alp[y])
 		{
 			str[x] = bet[y];
+			break;
 		}
 	}
 x++;
