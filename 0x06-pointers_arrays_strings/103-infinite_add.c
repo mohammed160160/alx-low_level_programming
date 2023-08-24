@@ -33,7 +33,7 @@ else
 bigl = l2;
 }
 
-if (size_r < bigl)
+if (size_r <= bigl + 1)
 {
 return (0);
 }
