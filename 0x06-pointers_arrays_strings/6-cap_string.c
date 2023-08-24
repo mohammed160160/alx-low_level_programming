@@ -11,7 +11,7 @@ char *cap_string(char *str)
 {
 int x;
 int y;
-char si[13] = " \t\n,;.!?\"(){}";
+char si[14] = " \t\n,;.!?\"(){}";
 
 x = 0;
 while (str[x] != '\0')
@@ -20,7 +20,7 @@ if (str[x] >= 'a' && str[x] <= 'z')
 {
 	for (y = 0; y < 13; y++)
 	{
-		if (str[x - 1] == si[y])
+		if (si[y] == str[x - 1] || x == 0 )
 		{
 		str[x] -= 32;
 		}
