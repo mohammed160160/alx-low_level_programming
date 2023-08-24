@@ -11,12 +11,12 @@ char *cap_string(char *str)
 {
 int x;
 int y;
-char si[13] = " \t\n,;.!?\"(){}";
+char si[14] = " \t\n\v,;.!?\"(){}";
 
 x = 0;
 while (str[x] != '\0')
 {
-	for (y = 0; y < 13; y++)
+	for (y = 0; y < 14; y++)
 	{
 	if (str[x] == si[y] && (str[x + 1] >= 'a' && str[x + 1] <= 'z'))
 		{
