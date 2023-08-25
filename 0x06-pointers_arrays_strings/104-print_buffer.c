@@ -13,7 +13,7 @@ void print_buffer(char *b, int size)
 int x = 0, y = 0, z = 0;
 for (x = 0; x <= size; x = x + 10)
 {
-if (x > size)
+if (x < size)
 {
 printf("%.8x: ", x);/*start of first part*/
 }
