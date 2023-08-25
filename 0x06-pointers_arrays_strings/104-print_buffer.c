@@ -13,9 +13,8 @@ void print_buffer(char *b, int size)
 int x = 0, y = 0, z = 0;
 while (x <= size)
 {
-printf("%.7x: ", x);
-/*-----------------------------------------*/
-for (y = 0; y < 5; y++)
+printf("%.7x: ", x);/*start of first part*/
+for (y = 0; y < 5; y++)/*start of the second part*/
 {
 if ((y * 2) + x >= size)
 {
@@ -31,19 +30,24 @@ printf(" ");
 }
 }
 printf(" ");
-/*-----------------------------------------------------*/
-for (z = 0; z < 10; z++)
+for (z = 0; z < 10; z++)/*start of the third part*/
 {
-if (z + x >= size)
-{
-printf(" ");
+	if (z + x >= size)
+	{
+	printf(" ");
+	}
+	else
+	{
+		if (b[z + x] < 32)
+		{
+		printf("%c", 0);
+		}
+		else
+		{
+		printf("%c", b[z + x]);
+		}
+	}
 }
-else
-{
-printf("%c", b[z + x]);
-}
-}
-/*------------------------------------------------------*/
 printf("\n");
 x = x + 10;
 }
