@@ -43,5 +43,9 @@ printf(".");
 }
 printf("\n");
 }
+if (size <= 0)
+{
+printf("\n");
+}
 return;
 }
