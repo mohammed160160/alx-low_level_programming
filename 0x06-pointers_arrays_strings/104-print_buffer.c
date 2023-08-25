@@ -47,5 +47,6 @@ printf("%c", b[z + x]);
 }
 printf("\n");
 }
+printf("\n");
 return;
 }
