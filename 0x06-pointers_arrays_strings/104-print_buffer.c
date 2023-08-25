@@ -21,9 +21,7 @@ if ((y * 2) + x >= size)
 printf("    ");
 }
 else
-{
-printf("%.2x%.2x", b[(y * 2) + x], b[(y * 2) + x + 1]);
-}
+{ printf("%.2x%.2x", b[(y * 2) + x], b[(y * 2) + x + 1]); }
 if (y != 4)
 { printf(" "); }
 }
