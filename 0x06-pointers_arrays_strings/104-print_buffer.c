@@ -14,18 +14,21 @@ int x = 0, y = 0, z = 0;
 for (x = 0; x < size; x = x + 10)
 {
 printf("%.8x: ", x); /*start of first part*/
-for (y = 0; y < 5; y++)/*start of the second part*/
+for (y = 0; y < 10; y++)/*start of the second part*/
 {
-if ((y * 2) + x >= size)
+if (x + y >= size)
 {
-printf("    ");
+printf("  ");
 }
-else
-{ printf("%.2x%.2x", b[(y * 2) + x], b[(y * 2) + x + 1]); }
-if (y != 4)
-{ printf(" "); }
+if (x + y < size)
+{
+printf("%.2x", b[x + y]);
 }
+if ((x + y) % 2 == 1)
+{
 printf(" ");
+}
+}
 for (z = 0; z < 10; z++)/*start of the third part*/
 {
 if (z + x >= size)
