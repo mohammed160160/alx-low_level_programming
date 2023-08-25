@@ -32,21 +32,21 @@ printf(" ");
 printf(" ");
 for (z = 0; z < 10; z++)/*start of the third part*/
 {
-	if (z + x >= size)
-	{
-	break;
-	}
-	else
-	{
-		if (b[z + x] < 32)
-		{
-		printf(".");
-		}
-		else
-		{
-		printf("%c", b[z + x]);
-		}
-	}
+if (z + x >= size)
+{
+break;
+}
+else
+{
+if (b[z + x] < 32)
+{
+printf(".");
+}
+else
+{
+printf("%c", b[z + x]);
+}
+}
 }
 printf("\n");
 x = x + 10;
