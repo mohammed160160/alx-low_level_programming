@@ -13,7 +13,7 @@
 
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-int sr = 0,x = 0, l1 = 0, l2 = 0,c = 0;
+int sr = 0, x = 0, l1 = 0, l2 = 0, c = 0;
 
 sr = size_r - 1;
 
@@ -27,7 +27,7 @@ while (n2[l2] != '\0')
 l2++;
 }
 
-if (l1 >= sr || l2 >= sr )
+if (l1 >= sr || l2 >= sr)
 {
 return (0);
 }
@@ -35,12 +35,9 @@ return (0);
 l1--;
 l2--;
 
-
-
-
 while (x != 0)
 {
-r[x] = n1 [x - 1] + n2[x - 1] + c;
+r[x] = n1[x - 1] + n2[x - 1] + c;
 if (r[x] >= 10 && x != 1)
 {
 r[x] -= 10;
