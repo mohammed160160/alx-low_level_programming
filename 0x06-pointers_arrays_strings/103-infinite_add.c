@@ -13,31 +13,31 @@
 
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-int x = 0, l1 = 0, l2 = 0, c = 0, bigl;
+int sr = 0,x = 0, l1 = 0, l2 = 0,c = 0;
 
-for (x = 0; n1[x] != '\0'; x++)
+sr = size_r - 1;
+
+while (n1[l1] != '\0')
 {
 l1++;
 }
-for (x = 0; n2[x] != '\0'; x++)
+
+while (n2[l2] != '\0')
 {
 l2++;
 }
 
-if (l1 >= l2)
-{
-bigl = l1;
-}
-else
-{
-bigl = l2;
-}
-
-if (size_r <= bigl + 1)
+if (l1 >= sr || l2 >= sr )
 {
 return (0);
 }
-x = bigl;
+
+l1--;
+l2--;
+
+
+
+
 while (x != 0)
 {
 r[x] = n1 [x - 1] + n2[x - 1] + c;
