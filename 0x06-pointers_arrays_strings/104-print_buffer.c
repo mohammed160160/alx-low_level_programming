@@ -11,12 +11,9 @@
 void print_buffer(char *b, int size)
 {
 int x = 0, y = 0, z = 0;
-for (x = 0; x <= size; x = x + 10)
-{
-if (x < size)
+for (x = 0; x < size; x = x + 10)
 {
 printf("%.8x: ", x);/*start of first part*/
-}
 for (y = 0; y < 5; y++)/*start of the second part*/
 {
 if ((y * 2) + x >= size)
@@ -28,9 +25,7 @@ else
 printf("%.2x%.2x", b[(y * 2) + x], b[(y * 2) + x + 1]);
 }
 if (y != 4)
-{
-printf(" ");
-}
+{ printf(" "); }
 }
 printf(" ");
 for (z = 0; z < 10; z++)/*start of the third part*/
@@ -39,6 +34,8 @@ if (z + x >= size)
 {
 break;
 }
+else
+{
 if (b[z + x] < 32)
 {
 printf(".");
@@ -46,6 +43,7 @@ printf(".");
 else
 {
 printf("%c", b[z + x]);
+}
 }
 }
 printf("\n");
