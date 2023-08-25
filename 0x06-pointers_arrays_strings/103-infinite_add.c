@@ -13,7 +13,7 @@
 
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-int sr = 0, x = 0, l1 = 0, l2 = 0, c = 0;
+int sr = 0, x = 0, l1 = 0, l2 = 0, t = 0;
 
 sr = size_r - 1;
 
@@ -34,6 +34,7 @@ return (0);
 
 l1--;
 l2--;
+
 
 while (x != 0)
 {
