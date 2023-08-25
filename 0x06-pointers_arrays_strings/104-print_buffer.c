@@ -11,7 +11,7 @@
 void print_buffer(char *b, int size)
 {
 int x = 0, y = 0, z = 0;
-while (x < size)
+for (x = 0; x < size; x = x + 10)
 {
 printf("%.8x: ", x);/*start of first part*/
 for (y = 0; y < 5; y++)/*start of the second part*/
@@ -49,7 +49,6 @@ printf("%c", b[z + x]);
 }
 }
 printf("\n");
-x = x + 10;
 }
 return;
 }
