@@ -34,7 +34,7 @@ for (z = 0; z < 10; z++)/*start of the third part*/
 {
 	if (z + x >= size)
 	{
-	printf(" ");
+	break;
 	}
 	else
 	{
