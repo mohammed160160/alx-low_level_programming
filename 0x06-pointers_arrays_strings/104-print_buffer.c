@@ -36,8 +36,6 @@ if (z + x >= size)
 {
 break;
 }
-else
-{
 if (b[z + x] < 32)
 {
 printf(".");
@@ -45,7 +43,6 @@ printf(".");
 else
 {
 printf("%c", b[z + x]);
-}
 }
 }
 printf("\n");
