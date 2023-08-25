@@ -11,7 +11,7 @@
 void print_buffer(char *b, int size)
 {
 int x = 0, y = 0, z = 0;
-while (x < size)
+while (x <= size)
 {
 printf("%.7x: ", x);
 /*-----------------------------------------*/
