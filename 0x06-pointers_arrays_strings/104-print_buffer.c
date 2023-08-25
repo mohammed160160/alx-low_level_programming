@@ -29,9 +29,7 @@ printf(" ");
 for (z = 0; z < 10; z++)/*start of the third part*/
 {
 if (z + x >= size)
-{
-break;
-}
+{ break; }
 if (b[z + x] >= 31 && b[z + x] <= 126)
 {
 printf("%c", b[z + x]);
@@ -43,7 +41,7 @@ printf(".");
 }
 printf("\n");
 }
-if (size <= 0)
+if (size <= 0) /* if it was 0*/
 {
 printf("\n");
 }
