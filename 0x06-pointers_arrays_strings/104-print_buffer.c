@@ -40,7 +40,7 @@ for (z = 0; z < 10; z++)/*start of the third part*/
 	{
 		if (b[z + x] < 32)
 		{
-		printf("%c", 0);
+		printf(".");
 		}
 		else
 		{
