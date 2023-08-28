@@ -14,6 +14,7 @@ unsigned int _strspn(char *s, char *accept)
 {
 int x = 0;
 int y = 0;
+int w = 0;
 
 while (s[x] != '\0')
 {
@@ -21,10 +22,10 @@ while (s[x] != '\0')
 	{
 		if (s[x] == accept[y])
 		{
-		return (s + x);
+		w += 1;
 		}
 	}
 x++;
 }
-return ('\0');
+return (w);
 }
