@@ -31,7 +31,7 @@ x++;
 if (x != l)
 {
 
-while (x <= l)
+while (s[x] != '\0')
 {
 
 _putchar(s[x]);
