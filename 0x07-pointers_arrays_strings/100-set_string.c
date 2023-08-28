@@ -12,7 +12,7 @@ void set_string(char **s, char *to)
 {
 int x;
 
-for (x=0; *s[x] != '\0'; x++)
+for (x = 0; *s[x] != '\0'; x++)
 {
 to[x] = *s[x];
 }
