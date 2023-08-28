@@ -16,13 +16,13 @@ int y = 0;
 
 while (s[x] != '\0')
 {
-	for (y=0; accept[y] != '\0';  y++)
+	for (y = 0; accept[y] != '\0';  y++)
 	{
 		if (s[x] == accept[y])
-        	{
-        	return (s + x);
-        	}
-	}	
+		{
+		return (s + x);
+		}
+	}
 x++;
 }
 
