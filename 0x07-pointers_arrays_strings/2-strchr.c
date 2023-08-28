@@ -12,7 +12,7 @@
 char *_strchr(char *s, char c)
 {
 int x = 0;
-int l;
+int l = 0;
 
 while (s[l] != '\0')
 {
@@ -30,17 +30,7 @@ x++;
 
 if (x != l)
 {
-
-while (s[x] != '\0')
-{
-
-_putchar(s[x]);
-x++;
-
-}
-
-return (s);
-
+return (s + x);
 }
 
 else
