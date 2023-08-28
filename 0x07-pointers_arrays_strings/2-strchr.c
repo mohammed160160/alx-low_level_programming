@@ -13,11 +13,10 @@ char *_strchr(char *s, char c)
 {
 int x = 0;
 int l;
-int sx;
 
 while (s[l] != '\0')
 {
-l++
+l++;
 }
 
 while (s[x] != '\0')
@@ -29,15 +28,19 @@ while (s[x] != '\0')
 x++;
 }
 
-sx = x;
-
 if (x != l)
 {
-for (x; x <= y; x++)
+
+while (x <= l)
 {
-s[x - sx] = s[x];
+
+_putchar(s[x]);
+x++;
+
 }
+
 return (s);
+
 }
 
 else
