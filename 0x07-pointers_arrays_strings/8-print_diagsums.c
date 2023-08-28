@@ -11,8 +11,13 @@
 void print_diagsums(int *a, int size)
 {
 int x;
-int dia1;
-int dia2;
+int dia1 = 0;
+int dia2 = 0;
+
+if (size = 0)
+{
+printf("%i, %i\n", dia1, dia2);
+}
 
 for (x = 0; x < size; x++)
 {
