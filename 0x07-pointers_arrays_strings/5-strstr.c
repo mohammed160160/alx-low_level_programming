@@ -18,8 +18,13 @@ while (needle[l] != '\0')
 l++;
 }
 
+if (l == 0)
+{
+return (haystack);
+}
 
-while (haystack[x])
+
+while (haystack[x] != '\0')
 {
 
 if (haystack[x] == needle[cc])
@@ -31,7 +36,7 @@ else
 	cc = 0;
 	}
 
-if (cc == l && l != 0)
+if (cc == l)
 {
 return (haystack + x - cc + 1);
 }
@@ -39,10 +44,7 @@ return (haystack + x - cc + 1);
 x++;
 }
 
-if (l == 0)
-{
-return (haystack + x);
-}
+
 
 
 return (NULL);
