@@ -11,21 +11,31 @@
 
 char *_strstr(char *haystack, char *needle)
 {
-int x = 0, l = 0, cc = 0;
+int x = 0, l = 0, ls = 0, cc = 0;
 
 while (needle[l] != '\0')
 {
 l++;
 }
 
-while (haystack[x])
+while (haystack[lh] != '\0')
+{
+lh++;
+}
+
+if (l == 0)
+{
+	return (haystack + lh);
+}
+
+while (x < lh)
 {
 
-	if (haystack[x] == needle[cc])
+if (haystack[x] == needle[cc])
 	{
 	cc++;
 	}
-	else
+else
 	{
 	cc = 0;
 	}
