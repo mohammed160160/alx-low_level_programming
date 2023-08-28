@@ -23,5 +23,5 @@ while (s[x])
 x++;
 }
 
-return (s + 2);
+return (NULL);
 }
