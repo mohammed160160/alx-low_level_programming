@@ -12,13 +12,7 @@
 char *_strpbrk(char *s, char *accept)
 {
 int x = 0;
-int l = 0;
 int y = 0;
-
-while (s[l] != '\0')
-{
-l++;
-}
 
 while (s[x] != '\0')
 {
@@ -26,20 +20,11 @@ while (s[x] != '\0')
 	{
 		if (s[x] == accept[y])
         	{
-        	break;
+        	return (s + x);
         	}
 	}	
 x++;
 }
 
-if (x != l)
-{
-return (s + x);
-}
-
-else
-{
 return ('\0');
-}
-
 }
