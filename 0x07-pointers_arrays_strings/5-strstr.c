@@ -31,13 +31,19 @@ else
 	cc = 0;
 	}
 
-if (cc == l)
+if (cc == l && l != 0)
 {
 return (haystack + x - cc + 1);
 }
 
 x++;
 }
+
+if (l == 0)
+{
+return (haystack + x);
+}
+
 
 return ('\0');
 }
