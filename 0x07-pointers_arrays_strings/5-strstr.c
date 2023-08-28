@@ -18,7 +18,7 @@ while (needle[l] != '\0')
 l++;
 }
 
-while (haystack[x] != '\0')
+while (haystack[x])
 {
 
 	if (haystack[x] == needle[cc])
