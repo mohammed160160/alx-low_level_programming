@@ -45,5 +45,5 @@ return (haystack + x);
 }
 
 
-return ('\0');
+return (NULL);
 }
