@@ -28,7 +28,7 @@ if (l == 0)
 	return (haystack + lh);
 }
 
-while (x < lh)
+while (haystack[x])
 {
 
 if (haystack[x] == needle[cc])
