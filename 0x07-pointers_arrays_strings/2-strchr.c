@@ -35,7 +35,7 @@ return (s + x);
 
 else
 {
-return ('\0');
+return (s);
 }
 
 }
