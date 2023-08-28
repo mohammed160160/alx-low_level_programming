@@ -12,30 +12,15 @@
 char *_strchr(char *s, char c)
 {
 int x = 0;
-int l = 0;
-
-while (s[l] != '\0')
-{
-l++;
-}
 
 while (s[x] != '\0')
 {
 	if (s[x] == c)
 	{
-	break;
+	return (s + x);
 	}
 x++;
 }
 
-if (x != l)
-{
-return (s + x);
-}
-
-else
-{
 return ('\0');
-}
-
 }
