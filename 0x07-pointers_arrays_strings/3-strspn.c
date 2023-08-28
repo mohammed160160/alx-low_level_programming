@@ -12,9 +12,7 @@
 
 unsigned int _strspn(char *s, char *accept)
 {
-int x = 0;
-int y = 0;
-int w = 0;
+int x = 0, y = 0, cc = 0, fc = 0;
 
 while (s[x] != '\0')
 {
@@ -22,10 +20,18 @@ while (s[x] != '\0')
 	{
 		if (s[x] == accept[y])
 		{
-		w += 1;
+		cc += 1;
 		}
+	}
+
+	fc += 1;
+	if (fc > cc)
+	{
+	return (cc);
 	}
 x++;
 }
-return (w);
+
+
+return (cc);
 }
