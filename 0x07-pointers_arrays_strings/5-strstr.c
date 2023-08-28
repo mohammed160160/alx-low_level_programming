@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * *_strpbrk - Searches for the first occurance of a string of line
+ * *_strstr - Searches for the first occurance of a string of line
  * pointed to by needle in the string and prints out everything after it
  * @haystack: The pointer to the string
  * @needle: The sub string to be searched in the string
