@@ -12,8 +12,8 @@
 char *_strchr(char *s, char c)
 {
 int x = 0;
-int y;
-
+int l;
+int sx;
 
 while (s[l] != '\0')
 {
@@ -29,19 +29,17 @@ while (s[x] != '\0')
 x++;
 }
 
+sx = x;
 
 if (x != l)
 {
 for (x; x <= y; x++)
 {
-
-
-
-
-
-
-return
+s[x - sx] = s[x];
 }
+return (s);
+}
+
 else
 {
 return ('\0');
