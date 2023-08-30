@@ -58,7 +58,13 @@ return (palidromelength(s, l));
 int palidromecheck(char s, int l1, int l2)
 {
 
+if ( l1 = l2 ||     )
+{
+return (1)
+}
 
+
+if ( *(s+l1) != *(s+l2) )
 
 
 
