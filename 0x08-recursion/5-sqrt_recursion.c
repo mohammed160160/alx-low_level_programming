@@ -36,17 +36,16 @@ return (x);
 int squareroot(int n, int y)
 {
 
-if (n / y == y)
+if (n / y == y && n % y == 0)
 {
 return (y);
 }
 
-if (n == y)
+else if (n == y)
 {
 return (-1);
 }
 
 y++;
-squareroot(n, y);
-return (0);
+return(squareroot(n, y));
 }
