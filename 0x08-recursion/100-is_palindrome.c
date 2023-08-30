@@ -44,7 +44,7 @@ l++;
 s++;
 }
 
-return (lengthforrev(s, l));
+return (palidromelength(s, l));
 
 }
 
