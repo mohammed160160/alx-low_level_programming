@@ -17,4 +17,7 @@ int squareroot(int n, int y);
 int primenumber(int n, int y);
 int findlength(char *s, int l);
 
+int lengthforrev(char *s, int l);
+void printingrev(char *s, int l);
+
 #endif
