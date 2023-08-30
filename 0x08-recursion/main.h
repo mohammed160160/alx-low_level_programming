@@ -20,7 +20,8 @@ int findlength(char *s, int l);
 int lengthforrev(char *s, int l);
 void printingrev(char *s, int l);
 
-int palidromecheck(char s, int l1, int l2);
+int is_palindrome(char *s);
+int palidromecheck(char *s, int l1, int l2);
 int palidromelength(char *s, int l);
 
 #endif
