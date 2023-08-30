@@ -11,9 +11,10 @@
 
 int wildcmp(char *s1, char *s2)
 {
-char m;
-char n;
-m = s1;
-n = s2;
+char *m;
+char *n;
+
+*m = *s1;
+*n = *s2;
 return (0);
 }
