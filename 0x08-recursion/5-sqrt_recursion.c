@@ -33,8 +33,9 @@ return (x);
 * Return: The value of root
 */
 
-int squareroot(int n, int y)
+void squareroot(int n, int y)
 {
+
 if (n / y == y)
 {
 return (y);
@@ -46,6 +47,6 @@ return (-1);
 }
 
 y++;
-
 squareroot(n, y);
+
 }
