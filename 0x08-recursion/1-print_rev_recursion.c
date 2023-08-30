@@ -10,8 +10,10 @@
 void _print_rev_recursion(char *s)
 
 {
+int x = 0;
 
-
+x = lengthforrev(s, x);
+printingrev(s, x);
 
 }
 
@@ -26,7 +28,18 @@ int lengthforrev(char *s, int l)
 
 {
 
+if (*s == '\0')
+{
+return (l);
+}
 
+if (*s != '\0')
+{
+l++;
+s++;
+}
+
+return (lengthforrev(s, l));
 
 }
 
@@ -41,6 +54,11 @@ void printingrev(char *s, int l)
 
 {
 
-
+if (l != 0)
+{
+_putchar(*(s + l - 1));
+l--;
+printingrev(s, l);
+}
 
 }
