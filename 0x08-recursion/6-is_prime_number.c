@@ -2,29 +2,50 @@
 #include <stdio.h>
 
 /**
- * main - check the code
- *
+ * is_prime_number - A program that checks if the number is prime or not
+ * @n:The number that goes into the function
  * Return: Always 0.
  */
 
 
 int is_prime_number(int n)
 {
-if ()
+int x = 2;
+
+if (n <= 1)
+{
+return (0);
+}
+
+x = primenumber(n, x);
+return (x);
+
+}
+
+
+/**
+* primenumber - check if the number is a prime number or not
+* @n: The number wanting to finding the square root of.
+* @y: The value of the rising counter for n.
+* Return: The value of root
+*/
+
+int primenumber(int n, int y)
 {
 
-}
-
-if ()
+if (n / y == y && n % y == 0)
 {
-
+return (y);
 }
 
-if ()
+else if (n == y)
 {
-
+return (-1);
 }
 
-return()
-
+y++;
+return (squareroot(n, y));
 }
+
+
+
