@@ -2,8 +2,8 @@
 #include <stdio.h>
 
 /**
- * main - check the code
- *
+ * _puts_recursion - Prints out the string pointed to by s
+ * @s: Pointer to the string
  * Return: Always 0.
  */
 void _puts_recursion(char *s)
@@ -11,8 +11,8 @@ void _puts_recursion(char *s)
 
 if (*s != '\0')
 {
-_putchar(*s);
-*s++;
+_putchar(s);
+*s += 1;
 _puts_recursion(s);
 }
 
