@@ -24,4 +24,6 @@ int is_palindrome(char *s);
 int palidromecheck(char *s, int l1, int l2);
 int palidromelength(char *s, int l);
 
+int wildcmp(char *s1, char *s2);
+
 #endif
