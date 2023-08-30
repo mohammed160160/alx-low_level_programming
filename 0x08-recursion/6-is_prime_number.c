@@ -33,19 +33,16 @@ return (x);
 int primenumber(int n, int y)
 {
 
-if (n / y == y && n % y == 0)
+if (y != n && n % y == 0)
 {
-return (y);
+return (0);
 }
 
-else if (n == y)
+if (y == n && n % y == 0)
 {
-return (-1);
+return (1);
 }
 
 y++;
-return (squareroot(n, y));
+return (primenumber(n, y));
 }
-
-
-
