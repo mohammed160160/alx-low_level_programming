@@ -60,4 +60,8 @@ int palidromecheck(char s, int l1, int l2)
 
 
 
+
+
+
+return (palidromecheck(s, l1, l2))
 }
