@@ -32,15 +32,11 @@ if (*s2 == '*' && *(s2 + 1) == '*')
 { return (wildcmp(s1, s2 + 1)); }
 
 if (*s2 == '*' && *(s2 + 1) != '*')
-	{
+{
 	if (*s1 != *(s2 + 1))
-	{
-	return (wildcmp(s1 + 1, s2));
-	}
+	{ return (wildcmp(s1 + 1, s2)); }
 	else
-	{
-	return (wildcmp(s1, s2 + 1));
-	}
-	}
+	{ return (wildcmp(s1, s2 + 1)); }
+}
 return (0);
 }
