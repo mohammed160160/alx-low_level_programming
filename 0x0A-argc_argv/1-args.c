@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main -
+ * main - Prints the number the argmuents in the line except the main argument
  * @argc: The argument counter
  * @argv: The argument vector(array)
  * Return: Success
