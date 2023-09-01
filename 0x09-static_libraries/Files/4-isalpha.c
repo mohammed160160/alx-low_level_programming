@@ -5,7 +5,7 @@
  * @c: the character the checker uses
  * Return: 1 if it's an alphabet value or 0 if it's not
  */
-int _isalpha(int c);
+int _isalpha(int c)
 	{
 	if (c >= 97 && c <= 122)
 	{
