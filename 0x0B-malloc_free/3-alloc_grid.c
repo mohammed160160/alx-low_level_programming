@@ -30,6 +30,11 @@ x[y] = malloc(width * sizeof(int));
 
 if (x == NULL)
 {
+for (y = 0; y < height ; y++)
+{
+free(x[y]);
+}
+free(x);
 return (NULL);
 }
 
