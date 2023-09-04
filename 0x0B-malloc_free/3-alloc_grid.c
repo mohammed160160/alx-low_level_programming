@@ -3,9 +3,9 @@
 #include <stdlib.h>
 
 /**
- * **alloc_grid - prints buffer in hexa
- * @width:3
- * @height:33
+ * **alloc_grid - allocates a space in the memory for a 2d array
+ * @width: The width of the array
+ * @height: The length of the array
  * Return: Nothing.
  */
 
