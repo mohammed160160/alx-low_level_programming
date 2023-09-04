@@ -26,6 +26,7 @@ x = malloc(height * sizeof(int *));
 
 if (x == NULL)
 {
+free(x);
 return (NULL);
 }
 
