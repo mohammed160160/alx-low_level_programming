@@ -21,9 +21,12 @@ if (x == NULL)
 return (NULL);
 }
 
-for (y = 0; y < size; y++)
+else
 {
-x[y] = c;
+	for (y = 0; y < size; y++)
+	{
+	x[y] = c;
+	}
 }
 
 return (x);
