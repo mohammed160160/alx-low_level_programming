@@ -32,13 +32,17 @@ return (NULL);
 for (y = 0; y < height ; y++)
 {
 x[y] = malloc(width * sizeof(int));
+
 if (x[y] == NULL)
 {
-free (x);
+for (y = 0; y < height ; y++)
+{
+free(x[y]);
+}
 return (NULL);
 }
-}
 
+}
 
 for (a = 0; a < height; a++)
 {
@@ -47,6 +51,5 @@ for (a = 0; a < height; a++)
 		x[a][b] = 0;
 	}
 }
-
 return (x);
 }
