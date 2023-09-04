@@ -3,9 +3,9 @@
 #include <stdlib.h>
 
 /**
- * *_strdup - prints buffer in hexa
- * @str:3
- * Return: Nothing.
+ * *_strdup - Copies a string from one location to another
+ * @str:The string in question
+ * Return: The pointer to the location of the copy of the string
  */
 
 char *_strdup(char *str)

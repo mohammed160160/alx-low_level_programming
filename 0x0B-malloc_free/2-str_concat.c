@@ -6,7 +6,7 @@
  * *str_concat - Condenses 2 string into a single string
  * @s1:The first string
  * @s2:The string after it
- * Return: Nothing.
+ * Return: The pointer to the condensed string
  */
 
 char *str_concat(char *s1, char *s2)

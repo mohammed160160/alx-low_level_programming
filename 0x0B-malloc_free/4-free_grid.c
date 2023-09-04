@@ -3,17 +3,20 @@
 #include <stdlib.h>
 
 /**
- * free_grid - prints buffer in hexa
- * @grid:3
- * @height:33
+ * free_grid - To free an 2d array from memory
+ * @grid:The grid wants to be free
+ * @height:The height of the array
  * Return: Nothing.
  */
 
 void free_grid(int **grid, int height)
 {
+int y;
 
-
-
-
+for (y = 0; y < height ; y++)
+{
+free(x[y]);
+}
 
 }
+

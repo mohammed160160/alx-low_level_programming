@@ -6,7 +6,8 @@
  * **alloc_grid - allocates a space in the memory for a 2d array
  * @width: The width of the array
  * @height: The length of the array
- * Return: Nothing.
+ * Return: The double pointer to the array or NULL if height or width less
+ * than or equal zero or x cant fit in the memory
  */
 
 int **alloc_grid(int width, int height)
