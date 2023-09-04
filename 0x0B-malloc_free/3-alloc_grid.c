@@ -34,6 +34,7 @@ for (y = 0; y < height ; y++)
 x[y] = malloc(width * sizeof(int));
 if (x[y] == NULL)
 {
+free (x);
 return (NULL);
 }
 }
