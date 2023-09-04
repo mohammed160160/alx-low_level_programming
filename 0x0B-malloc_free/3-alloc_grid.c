@@ -30,10 +30,10 @@ x[y] = malloc(width * sizeof(int));
 
 if (x == NULL)
 {
-	for (z = 0; z < height ; z++)
-	{
-	free(x[z]);
-	}
+for (z = 0; z < height ; z++)
+{
+free(x[z]);
+}
 return (NULL);
 }
 
@@ -45,20 +45,17 @@ for (a = 0; a < height; a++)
 	}
 }
 
-
 for (a = 0; a < height; a++)
 {
-	for (b = 0; b < width; b++)
-	{
-		if (x[a][b] != 0)
+        for (b = 0; b < width; b++)
+        {
+                if(x[a][b] != 0)
 		{
+			free(*x);
 			return (NULL);
 		}
-	}
+        }
 }
-
-
-
 
 
 return (x);
