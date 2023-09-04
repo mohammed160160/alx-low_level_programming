@@ -14,14 +14,15 @@ char *x;
 int y;  /*The counter*/
 int l = 0;  /*length of str*/
 
-while (str[l] != '\0')
-{
-l++;
-}
-
 if (str == NULL)
 {
 return (NULL);
+}
+
+
+while (str[l] != '\0')
+{
+l++;
 }
 
 x = malloc((l + 1) * sizeof(char));
