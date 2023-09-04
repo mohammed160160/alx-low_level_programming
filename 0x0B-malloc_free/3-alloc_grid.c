@@ -51,7 +51,7 @@ for (a = 0; a < height; a++)
         {
                 if(x[a][b] != 0)
 		{
-			free(*x);
+			free(x);
 			return (NULL);
 		}
         }
