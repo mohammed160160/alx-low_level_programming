@@ -15,7 +15,7 @@ int y;
 
 for (y = 0; y < height ; y++)
 {
-free(x[y]);
+free(grid[y]);
 }
 
 }
