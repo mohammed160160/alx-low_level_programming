@@ -28,7 +28,7 @@ for (y = 0; y < height ; y++)
 x[y] = malloc(width * sizeof(int));
 }
 
-if (x == NULL)
+if (x == NULL || *x == NULL)
 {
 return (NULL);
 }
