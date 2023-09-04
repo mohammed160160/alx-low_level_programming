@@ -46,5 +46,7 @@ s[pt + l] = av[x][y];
 s[pt + l] = '\n';
 pt += l;
 }
+*s = *(s - pt);
+
 return (s);
 }
