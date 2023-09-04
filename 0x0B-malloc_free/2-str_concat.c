@@ -16,12 +16,13 @@ int y, la = 0, lb = 0;
 
 if (s1 == NULL)
 {
-s1 = '';
+s1 = '\0';
 }
 if (s2 == NULL)
 {
-s2 = '';
+s2 = '\0';
 }
+
 while (s1[la] != '\0')
 	{
 	la++;
@@ -31,16 +32,23 @@ while (s2[lb] != '\0')
 	lb++;
 	}
 
-x = malloc((la + 1) * sizeof(char));
+x = malloc((la + lb + 1) * sizeof(char));
 
 if (x == NULL)
 {
 return (NULL);
 }
 
-for (y = 0; y < l; y++)
+for (y = 0; y < la + lb; y++)
 {
-x[y] = str[y];
+	if (y < la)
+{
+	x[y] = s1[y];
+}
+	else
+	{
+	x[y] = s2[y - la];
+	}
 }
 
 return (x);
