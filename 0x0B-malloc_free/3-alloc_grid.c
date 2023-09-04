@@ -23,15 +23,17 @@ return (NULL);
 }
 
 x = malloc(height * sizeof(int *));
-
 for (y = 0; y < height ; y++)
 {
 x[y] = malloc(width * sizeof(int));
 }
 
-if (*x == NULL)
+for (a = 0; a < height; a++)
 {
-return (NULL);
+		if (x[a] == NULL)
+		{
+		return (NULL);
+		}
 }
 
 for (a = 0; a < height; a++)
