@@ -30,6 +30,7 @@ x[y] = malloc(width * sizeof(int));
 
 if (x == NULL)
 {
+free(x);
 return (NULL);
 }
 
