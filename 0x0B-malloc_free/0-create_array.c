@@ -16,7 +16,7 @@ unsigned int y;
 
 x = malloc(size * sizeof(char));
 
-if (x == NULL)
+if (*x == NULL)
 {
 return (NULL);
 }
