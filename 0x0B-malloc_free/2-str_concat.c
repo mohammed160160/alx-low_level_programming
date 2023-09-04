@@ -16,11 +16,11 @@ int y, la = 0, lb = 0;
 
 if (s1 == NULL)
 {
-	s1 = '\0';
+	s1 = "";
 }
 if (s2 == NULL)
 {
-	s2 = '\0';
+	s2 = "";
 }
 
 while (s1[la] != '\0')
