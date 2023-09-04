@@ -53,7 +53,7 @@ for (a = 0; a < height; a++)
 		{
 			for (y = 0; y < height ; y++)
 			{
-				free(grid[y]);
+				free(x[y]);
 			}
 			return (NULL);
 		}
