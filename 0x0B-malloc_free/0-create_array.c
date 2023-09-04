@@ -16,17 +16,21 @@ unsigned int y;
 
 x = malloc(size);
 
+if (size == 0)
+{
+return (NULL);
+}
+
+x = malloc(size);
+
 if (x == NULL)
 {
 return (NULL);
 }
 
-else
+for (y = 0; y < size; y++)
 {
-	for (y = 0; y < size; y++)
-	{
-	x[y] = c;
-	}
+x[y] = c;
 }
 
 return (x);
