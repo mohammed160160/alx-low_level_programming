@@ -14,12 +14,12 @@ char *x;
 int y;  /*The counter*/
 int l = 0;  /*length of str*/
 
-while(str[l] != '\0')
+while (str[l] != '\0')
 {
 l++;
 }
 
-if (l == 0)
+if (str == NULL)
 {
 return (NULL);
 }
