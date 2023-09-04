@@ -42,7 +42,6 @@ free(x[y]);
 free(x);
 return (NULL);
 }
-
 }
 
 for (a = 0; a < height; a++)
