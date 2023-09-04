@@ -4,7 +4,7 @@
 
 /**
  * free_grid - To free an 2d array from memory
- * @grid:The grid wants to be free
+ * @*grid:The grid wants to be free
  * @height:The height of the array
  * Return: Nothing.
  */
@@ -15,7 +15,7 @@ int y;
 
 for (y = 0; y < height ; y++)
 {
-free(grid[y]);
+free(*grid);
 }
 
 }
