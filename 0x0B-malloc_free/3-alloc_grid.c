@@ -26,13 +26,16 @@ x = malloc(height * sizeof(int *));
 
 if (x == NULL)
 {
-free(x);
 return (NULL);
 }
 
 for (y = 0; y < height ; y++)
 {
 x[y] = malloc(width * sizeof(int));
+if (x[y] == NULL)
+{
+return (NULL);
+}
 }
 
 
