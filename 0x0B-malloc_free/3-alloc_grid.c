@@ -51,7 +51,10 @@ for (a = 0; a < height; a++)
         {
                 if(x[a][b] != 0)
 		{
-			free(x);
+			for (y = 0; y < height ; y++)
+			{
+				free(grid[y]);
+			}
 			return (NULL);
 		}
         }
