@@ -45,5 +45,21 @@ for (a = 0; a < height; a++)
 	}
 }
 
+
+for (a = 0; a < height; a++)
+{
+	for (b = 0; b < width; b++)
+	{
+		if (x[a][b] != 0)
+		{
+			return (NULL);
+		}
+	}
+}
+
+
+
+
+
 return (x);
 }
