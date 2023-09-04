@@ -11,44 +11,40 @@
 
 char *argstostr(int ac, char **av)
 {
-char *x;
-int z, y, lt = 0, lc=0, l = 0;
+char *s;
+int ct, pt, l, x, y;/*ct= Current total - pt previous total - l current length - xyz variables*/
 
 if (ac == 0 || av == NULL)
 {
 return (NULL);
 }
-
-for(z = 0; z < ac; z++)
+/********************************************************************/
+for(x = 0; x < ac; x++)
 {
 l = 0;
-while (av[z][l] != '\0')
+
+while (av[x][l] != '\0')
 {
 l++;
 }
-lt += l;
-}
 
-x = malloc((lt + 1) * sizeof(char));
-if (x == NULL)
+ct += l;
+
+*s = *(s + pt + 1);
+
+s = malloc(l * sizeof(char));
+if (s == NULL)
 {
 return (NULL);
 }
 
-for(z = 0; z < ac; z++)
+for (y = 0; y < l; y++)
 {
-l = 0;
-	while (av[z][l] != '\0')
-	{
-	l++;
-	}
-		for (y = 0; y < l; y++)
-			{
-			x[lc+l] = av[z][y];
-			}
-x[lc+l] = '\n';
-lc += l;
-}
-return (x);
+s[pt + l] = av[x][y];
 }
 
+s[pt + l] = '\n';
+pt += l;
+}
+return (s);
+}
