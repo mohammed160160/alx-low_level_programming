@@ -26,8 +26,8 @@ while (*av[l] != '\0')
 	l++;
 	}
 tleng += l;
-printf("Tleng = %i",Tlength);
-printf("length = %i",Tlength);
+printf("Tleng = %i",tleng);
+printf("length = %i",l);
 }
 
 s = malloc(tleng + 1 * sizeof(char)); /*Declaring the memory*/
