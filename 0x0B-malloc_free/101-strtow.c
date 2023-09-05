@@ -17,6 +17,7 @@ return (NULL);
 }
 los = string_length(str);
 word = word_counter(str, los);
+printf("The number of elements and words in this string  %i--%i\n", los, word);
 if (word == 0)
 { return (NULL); }
 s = malloc((word) * sizeof(char*));/*declaring the main array*/
@@ -78,7 +79,7 @@ int word_counter(char *str, int q)
 int x;
 int y = 0;
 
-for (x = 1; x < q; x++)
+for (x = 0; x < q; x++)
 {
 	if ((str[x - 1] == 32 || str[x - 1] == '\0') && str[x] != 32)
 	{
