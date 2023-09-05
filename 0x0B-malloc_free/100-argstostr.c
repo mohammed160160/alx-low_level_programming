@@ -28,7 +28,7 @@ while (*av[l] != '\0')
 tleng += l;
 }
 
-s = malloc((tleng + 1) * sizeof(char)); /*Declaring the memory*/
+s = malloc(tleng + 1 * sizeof(char)); /*Declaring the memory*/
 if (s == NULL)
 {
 return (NULL);
