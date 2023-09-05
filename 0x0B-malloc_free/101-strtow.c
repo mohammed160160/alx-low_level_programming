@@ -9,10 +9,11 @@
  * Return: Nothing.
  */
 
-char **strtow(char *str);
+char **strtow(char *str)
 {
 char **s;
-if (str == 0 || str == NULL)
+
+if (str == '\0' || str == NULL)
 {
 return (NULL);
 }
