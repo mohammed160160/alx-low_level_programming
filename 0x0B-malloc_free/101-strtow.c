@@ -8,7 +8,7 @@
  * Return: Null if str is empty or cannot allocate space 1 if else
  */
 
-char **strtow(char *str)
+char **strtow(char *str __attribute__ ((unused)))
 {
 char **s;
 int word = 0;
@@ -28,7 +28,7 @@ printf("print the words of the string = %i  \n", word);
 printf("print the address of the string = %d  \n", *str);
 printf("print the content of the string = %s  \n", str);
 printf("print the address of the main = %d  \n", **s);
-
+printf("print the address of the main = %s  \n", s);
 
 return (s);
 }
