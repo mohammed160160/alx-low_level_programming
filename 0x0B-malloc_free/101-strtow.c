@@ -28,7 +28,6 @@ if ((str[a - 1] == 32 || str[a - 1] == '\0') && str[a] != 32)
 	{
 	wlength = length_of_word(str, a);
 	s[b]  = malloc(wlength * sizeof(char));
-	printf("The current start is  and length in this string  %i--%i\n", a, wlength);
 		if (s[b] == NULL)
 		{
 			for (b = 0; b < word ; b++)
