@@ -24,21 +24,21 @@ los = string_length(str);
 word = word_counter(str, los);
 
 
-s = malloc (word * sizeof(char));
+s = malloc (word * sizeof(char*));
 if (s == NULL)
 {
-return (NULL)
+return (NULL);
 }
 
 
-for (x = 0;  x < size; x++)
+for (x = 0;  x < word; x++)
 {
 
-s[x] = malloc(length * sizeof(int));
+s[x] = malloc(los* sizeof(char));
 
 if (s[x] == NULL)
 {
-for (x = 0; x < height ; x++)
+for (x = 0; x < los ; x++)
 {
 free(s[x]);
 }
