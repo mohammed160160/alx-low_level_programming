@@ -26,7 +26,7 @@ while (av[x][l] != '\0')
 l++;
 }
 tleng += l;
-printf("length = %i total length = %i\n", l, tleng);
+printf("length = %i totallength = %i\n", l, tleng);
 }
 printf("is this part reading or not");
 
