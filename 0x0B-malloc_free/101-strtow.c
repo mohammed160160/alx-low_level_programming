@@ -29,6 +29,8 @@ if (s == NULL)
 return (NULL);
 }
 
+printf("The number of elements in this string  %i\n", los);
+printf("The number of words in this string  %i\n", word);
 
 
 return (s);
@@ -66,8 +68,8 @@ int count;
 
 for (x = 0; x < los; x++)
 {
-	if (str[x] == 32 && str[x++] != 32 && str[x++] != '\0')
-	{
+	if (str[x - 1] == 32 && str[x] != 32)
+	{	
 	count++;
 	}
 }
