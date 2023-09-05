@@ -28,8 +28,13 @@ l++;
 tleng += l;
 }
 
-s = malloc((tleng + 1) * sizeof(char)); /*Declaring the memory*/
-printf("The size of s is %ld", sizeof(s));
+tleng += ac;
+
+s = malloc((tleng) * sizeof(char)); /*Declaring the memory*/
+
+printf("The size of s is %ld\n", sizeof(s));
+printf("The size of total length of this argument is %i\n", tleng);
+printf("The numbers of arguments in this program is %i\n", ac);
 
 if (s == NULL)
 {
