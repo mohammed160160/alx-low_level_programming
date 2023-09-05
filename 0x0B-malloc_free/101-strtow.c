@@ -23,9 +23,11 @@ return (NULL);
 los = string_length(str);
 word = word_counter(str, los);
 
-
-*s = *str;
-
+printf("print the length of the string = %i  \n", los);
+printf("print the words of the string = %i  \n", word);
+printf("print the address of the string = %p  \n", *str);
+printf("print the content of the string = %s  \n", str);
+printf("print the address of the main = %p  \n", **s);
 
 
 return (s);
