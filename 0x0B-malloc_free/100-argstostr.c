@@ -11,7 +11,7 @@
 char *argstostr(int ac, char **av)
 {
 char *s;
-int tleng, cleng, l, x, y;
+int tleng = 0, cleng = 0, l, x, y;
 
 if (ac == 0 || av == NULL)
 {
@@ -26,9 +26,7 @@ while (av[x][l] != '\0')
 l++;
 }
 tleng += l;
-printf("length = %i totallength = %i\n x", l, tleng);
 }
-printf("is this part reading or not");
 
 s = malloc(tleng * sizeof(char)); /*Declaring the memory*/
 if (s == NULL)
