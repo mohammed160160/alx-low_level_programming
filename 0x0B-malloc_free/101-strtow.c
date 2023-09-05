@@ -13,7 +13,7 @@ char **strtow(char *str __attribute__ ((unused)))
 char **s;
 int word = 0;
 int los = 0;
-
+int x;
 
 if (str == NULL)
 {
@@ -23,15 +23,53 @@ return (NULL);
 los = string_length(str);
 word = word_counter(str, los);
 
-printf("print the length of the string = %i  \n", los);
-printf("print the words of the string = %i  \n", word);
-printf("print the address of the string = %d  \n", *str);
-printf("print the content of the string = %s  \n", str);
-printf("print the address of the main = %d  \n", **s);
-printf("print the address of the main = %s  \n", s);
+
+s = malloc (word * sizeof(char));
+if (s == NULL)
+{
+return (NULL)
+}
+
+
+for (x = 0;  x < size; x++)
+{
+
+s[x] = malloc(length * sizeof(int));
+
+if (s[x] == NULL)
+{
+for (x = 0; x < height ; x++)
+{
+free(s[x]);
+}
+free(s);
+return (NULL);
+}
 
 return (s);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /**
  * string_length - finds the length of the string
  * @str: The string which it needs to be searched
