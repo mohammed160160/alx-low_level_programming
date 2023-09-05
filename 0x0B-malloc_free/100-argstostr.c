@@ -27,8 +27,8 @@ for (x = 0; x < ac; x++) /*Total length of the compiler*/
 		}
 	tleng += l;
 }
-tleng += ac + 1;
-s = malloc(tleng * sizeof(char)); /*Declaring the memory*/
+tleng += ac;
+s = malloc((tleng + 1) * sizeof(char)); /*Declaring the memory*/
 if (s == NULL)
 {
 return (NULL);
