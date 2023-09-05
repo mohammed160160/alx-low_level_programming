@@ -13,7 +13,6 @@ char **strtow(char *str __attribute__ ((unused)))
 char **s;
 int word = 0;
 int los = 0;
-int x;
 
 if (str == NULL)
 {
@@ -31,41 +30,9 @@ return (NULL);
 }
 
 
-for (x = 0;  x < word; x++)
-{
-
-s[x] = malloc(los * sizeof(char));
-
-if (s[x] == NULL)
-{
-for (x = 0; x < los ; x++)
-{
-free(s[x]);
-}
-free(s);
-return (NULL);
-}
 
 return (s);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -79,7 +46,7 @@ int string_length(char *str)
 {
 int x;
 
-while (x != '\0')
+while (str[x] != '\0')
 {
 x++;
 }
