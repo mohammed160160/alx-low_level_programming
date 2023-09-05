@@ -11,7 +11,7 @@
 char *argstostr(int ac, char **av)
 {
 char *s;
-int tleng = 0, cleng = 0, l, x, y;
+int tleng = 0, cleng = 0, l, x, y, z, w;
 
 if (ac == 0 || av == NULL)
 {
@@ -37,18 +37,21 @@ if (s == NULL)
 return (NULL);
 }
 
-for (x = 0; x < ac; x++)/* giving value to the memory spaces*/
+for (z = 0; z < ac; z++)/* giving value to the memory spaces*/
 {
 l = 0;
-while (av[x][l] != '\0')
+	
+while (av[z][l] != '\0')
 {
 l++;
 }
+
 for (y = 0; y < l; y++)
 {
-s[cleng + l] = av[x][y];
+w = cleng + l;
+s[w] = av[z][y];
 }
-s[cleng + l] = '\n';
+s[w + 1] = '\n';
 cleng += l + 1;
 }
 return (s);
