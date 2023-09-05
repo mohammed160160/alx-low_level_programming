@@ -12,9 +12,7 @@ char **strtow(char *str)
 char **s;
 int word = 0, los = 0, a =  0, b =  0, wlength = 0, xyz = 0;
 if (str == NULL || str[0] == '\0')
-{
-return (NULL);
-}
+{ return (NULL); }
 los = string_length(str);
 word = word_counter(str, los);
 if (word == 0)
@@ -97,7 +95,7 @@ return (y);
 int length_of_word(char  *str, int q)
 {
 int x  =  q;
-while (str[q] != 32 && str[q] != '\0') 
+while (str[q] != 32 && str[q] != '\0')
 	{
 	q++;
 	}
