@@ -14,7 +14,9 @@ char **s;
 int now = 0;
 int los = 0;
 
-if (str == '\0' || str == NULL)
+(void)*str;
+
+if (str == ' ' || str == NULL)
 {
 return (NULL);
 }
@@ -40,7 +42,7 @@ int x;
 
 while (x != '\0')
 {
-x++
+x++;
 }
 
 return (x);
