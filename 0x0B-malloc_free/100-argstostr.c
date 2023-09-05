@@ -22,13 +22,15 @@ for(x = 0; x < ac; x++) /*Total length of the compiler*/
 {
 l = 0;
 while (av[x][l] != '\0')
-	{
-	l++;
-	}
-tleng += l;
+{
+l++;
 }
+tleng += l;
+printf("length = %i\n", l)
+}
+printf("total length = %i\n", tlength)
 
-s = malloc(tleng + 1 * sizeof(char)); /*Declaring the memory*/
+s = malloc(tleng * sizeof(char)); /*Declaring the memory*/
 if (s == NULL)
 {
 return (NULL);
