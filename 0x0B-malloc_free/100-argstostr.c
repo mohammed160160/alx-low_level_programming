@@ -28,7 +28,7 @@ l++;
 tleng += l;
 }
 
-tleng += ac;
+tleng += ac + 1;
 
 s = malloc((tleng) * sizeof(char)); /*Declaring the memory*/
 
