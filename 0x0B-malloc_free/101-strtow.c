@@ -67,11 +67,13 @@ int count;
 
 for (x = 0; x < los; x++)
 {
-	if (str[x - 1] == 32 && str[x] != 32)
+	if ((str[x - 1] == 32 || str[x - 1] == '\0') && str[x] != 32)
 	{	
 	count++;
 	}
 }
+
+
 printf("The number of words here in this string  %i\n", count);
 return (count);
 }
