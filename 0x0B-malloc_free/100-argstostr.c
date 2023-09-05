@@ -48,7 +48,7 @@ l++;
 
 for (y = 0; y < l; y++)
 {
-w = cleng + l;
+w = cleng + y;
 s[w] = av[z][y];
 }
 s[w + 1] = '\n';
