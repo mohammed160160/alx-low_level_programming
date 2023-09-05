@@ -10,46 +10,45 @@
 char **strtow(char *str)
 {
 char **s;
-int word = 0, los = 0, a =  0, b =  0, wlength = 0;
+int word = 0, los = 0, a =  0, b =  0, wlength = 0, xyz = 0;
 if (str == NULL)
 {
 return (NULL);
 }
-
 los = string_length(str);
 word = word_counter(str, los);
-
-printf("The number of elements and words in this string  %i--%i\n", los, word);
-
-s = malloc(word * sizeof(char*));
+s = malloc(word * sizeof(char*));/*declaring the main array*/
 if (s == NULL || word == 0)
-{
-return (NULL);
-}
-
-for (a = 0; a < los; a++)
+{ return (NULL); }
+for (a = 0; a < los; a++)/*declaring the sub array*/
 {
 if ((str[a - 1] == 32 || str[a - 1] == '\0') && str[a] != 32)
 	{
 	wlength = length_of_word(str, a);
-	printf("The word starts at a with length of  %i--%i\n", a, wlength);
 	s[b]  = malloc(wlength * sizeof(char*));
 		if (s[b] == NULL)
 		{
 			for (b = 0; b < word ; b++)
-			{
-			free(s[b]);
-			}
+			{ free(s[b]); }
 			free(s);
 			return (NULL);
 		}
 		b++;
 	}
 }
+b = 0;
+for (a = 0; a < los; a++)/*declaring variables*/
+{
+	if ((str[a - 1] == 32 || str[a - 1] == '\0') && str[a] != 32)
+	{
+	wlength = length_of_word(str, a);
+		for (xyz = 0; xyz <  wlength ; xyz++)
+		{ s[b][xyz] = str[wlength +  xyz]; }
+	b++;
+	}
+}
 return (s);
 }
-
-
 
 /**
  * string_length - finds the length of the string
