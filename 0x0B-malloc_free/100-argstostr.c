@@ -26,7 +26,7 @@ l = 0;
 	}
 tleng += l;
 }
-s = malloc(tleng + 2 * sizeof(char)); /*Declaring the memory*/
+s = malloc((tleng + 2) * sizeof(char)); /*Declaring the memory*/
 	if (s == NULL)
 	{
 	return (NULL);
