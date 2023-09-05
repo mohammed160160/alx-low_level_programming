@@ -8,19 +8,38 @@
  * @ac:argument counter
  * Return: The pointer to the string or NULL if the operation failed
  */
-
 char *argstostr(int ac, char **av)
 {
 char *s;
-int ct, pt, l, x, y;/*ct= Current total - pt previous total - l current length - xyz variables*/
+int tleng, cleng, l, x, y;
 
 if (ac == 0 || av == NULL)
 {
 return (NULL);
 }
-/********************************************************************/
-for(x = 0; x < ac; x++)
+
+for(x = 0; x < ac; x++) /*Total length of the compiler*/
 {
+l = 0;
+while (av[x][l] != '\0')
+{
+l++;
+}
+tleng += l;
+printf ("current length is %i", l);
+printf ("total length is %i", l);
+}
+printf ("current length is %i", l);
+printf ("total length is %i", l);
+s = malloc(tleng + 1 * sizeof(char)); /*Declaring the memory*/
+if (s == NULL)
+{
+return (NULL);
+}
+
+for(x = 0; x < ac; x++)/* giving value to the memory spaces*/
+{
+   
 l = 0;
 
 while (av[x][l] != '\0')
@@ -28,25 +47,15 @@ while (av[x][l] != '\0')
 l++;
 }
 
-ct += l;
-
-*s = *(s + pt + 1);
-
-s = malloc(l * sizeof(char));
-if (s == NULL)
-{
-return (NULL);
-}
-
 for (y = 0; y < l; y++)
 {
-s[pt + l] = av[x][y];
+s[cleng + l] = av[x][y];
 }
 
-s[pt + l] = '\n';
-pt += l;
+s[cleng + l] = '\n';
+
+cleng += l + 1;
 }
-*s = *(s - pt);
 
 return (s);
 }
