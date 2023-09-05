@@ -28,7 +28,8 @@ l++;
 tleng += l;
 }
 
-s = malloc(tleng * sizeof(char)); /*Declaring the memory*/
+s = malloc((tleng + 1) * sizeof(char)); /*Declaring the memory*/
+printf("The size of s is %ld", sizeof(s));
 
 if (s == NULL)
 {
