@@ -35,7 +35,7 @@ return (NULL);
 }
 for (z = 0; z < ac; z++)/* giving value to the memory spaces*/
 {
-l = 0;
+l = 0;	
 while (av[z][l] != '\0')
 {
 l++;
