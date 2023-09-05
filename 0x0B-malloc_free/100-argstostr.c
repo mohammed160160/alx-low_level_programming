@@ -21,7 +21,7 @@ return (NULL);
 for(x = 0; x < ac; x++) /*Total length of the compiler*/
 {
 l = 0;
-while (*av[l] != '\0')
+while (av[x][l] != '\0')
 	{
 	l++;
 	}
@@ -40,7 +40,6 @@ for(x = 0; x < ac; x++)/* giving value to the memory spaces*/
 {
 
 l = 0;
-
 while (av[x][l] != '\0')
 {
 l++;
