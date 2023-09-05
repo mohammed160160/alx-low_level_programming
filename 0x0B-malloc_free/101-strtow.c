@@ -43,7 +43,7 @@ for (a = 0; a < los; a++)/*declaring variables*/
 	{
 	wlength = length_of_word(str, a);
 		for (xyz = 0; xyz <  wlength ; xyz++)
-		{ s[b][xyz] = str[wlength +  xyz]; }
+		{ s[b][xyz] = str[a +  xyz]; }
 	b++;
 	}
 }
