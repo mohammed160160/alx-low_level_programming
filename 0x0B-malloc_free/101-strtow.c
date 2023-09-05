@@ -11,21 +11,20 @@
 char **strtow(char *str)
 {
 char **s;
-int now = 0;
+int word = 0;
 int los = 0;
 
-(void)*str;
 
-if (str == ' ' || str == NULL)
+if (str == NULL)
 {
 return (NULL);
 }
 
 los = string_length(str);
-now = word_counter(str, los);
+word = word_counter(str, los);
 
 
-
+*s = *str;
 
 
 
