@@ -19,7 +19,7 @@ los = string_length(str);
 word = word_counter(str, los);
 if (word == 0)
 { return (NULL); }
-s = malloc((word) * sizeof(char*));/*declaring the main array*/
+s = malloc((word + 1) * sizeof(char*));/*declaring the main array*/
 if (s == NULL)
 { return (NULL); }
 for (a = 0; a < los; a++)/*declaring the sub array*/
@@ -28,6 +28,7 @@ if ((str[a - 1] == 32 || str[a - 1] == '\0') && str[a] != 32)
 	{
 	wlength = length_of_word(str, a);
 	s[b]  = malloc(wlength * sizeof(char));
+	printf("The current start is  and length in this string  %i--%i\n", a, wlength);
 		if (s[b] == NULL)
 		{
 			for (b = 0; b < word ; b++)
