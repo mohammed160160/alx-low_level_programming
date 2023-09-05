@@ -7,13 +7,10 @@
  * @str:The string which it needs to be searched
  * Return: Null if str is empty or cannot allocate space 1 if else
  */
-
-char **strtow(char *str __attribute__ ((unused)))
+char **strtow(char *str)
 {
 char **s;
-int word = 0;
-int los = 0;
-
+int word = 0, los = 0, a =  0, b =  0, wlength = 0;
 if (str == NULL)
 {
 return (NULL);
@@ -24,28 +21,33 @@ word = word_counter(str, los);
 
 printf("The number of elements and words in this string  %i--%i\n", los, word);
 
-s = malloc (word * sizeof(char*));
-if (s == NULL || s == 0)
+s = malloc(word * sizeof(char*));
+if (s == NULL || word == 0)
 {
 return (NULL);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+for (a = 0; a < los; a++)
+{
+if ((str[a - 1] == 32 || str[a - 1] == '\0') && str[a] != 32)
+	{
+	wlength = length_of_word(str, a);
+	printf("The word starts at a with length of  %i--%i\n", a, wlength);
+	s[b]  = malloc(wlength * sizeof(char*));
+		if (s[b] == NULL)
+		{
+			for (b = 0; b < word ; b++)
+			{
+			free(s[b]);
+			}
+			free(s);
+			return (NULL);
+		}
+		b++;
+	}
+}
 return (s);
 }
-
 
 
 
@@ -56,30 +58,46 @@ return (s);
  */
 int string_length(char *str)
 {
-int x;
+int x  =  0;
 while (str[x] != '\0')
 	{
 	x++;
 	}
 return (x);
 }
+
 /**
  * word_counter - finds the number of words in a string
  * @str: The string which it needs to be searched
- * @los: Length of String
+ * @q: Length of String
  * Return: The number of words in a string
  */
-int word_counter(char *str, int los)
+int word_counter(char *str, int q)
 {
 int x;
-int count = 0;
 
-for (x = 0; x < los; x++)
+for (x = 0; x < q; x++)
 {
 	if ((str[x - 1] == 32 || str[x - 1] == '\0') && str[x] != 32)
-	{	
-	count++;
+	{
+	q++;
 	}
 }
-return (count);
+return (q);
+}
+
+/**
+ * length_of_word - finds the length of a single
+ * @str: The string which it needs to be searched
+ * @q: The element in the array where the word started
+ * Return: The number of words in a string
+ */
+int length_of_word(char  *str, int q)
+{
+int x  =  q;
+while (str[q] != 32)
+	{
+	q++;
+	}
+return (q - x);
 }
