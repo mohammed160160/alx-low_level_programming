@@ -17,10 +17,9 @@ return (NULL);
 }
 los = string_length(str);
 word = word_counter(str, los);
-printf("The number of elements and words in this string  %i--%i\n", los, word);
 if (word == 0)
 { return (NULL); }
-s = malloc((word - 1) * sizeof(char*));/*declaring the main array*/
+s = malloc((word) * sizeof(char*));/*declaring the main array*/
 if (s == NULL)
 { return (NULL); }
 for (a = 0; a < los; a++)/*declaring the sub array*/
