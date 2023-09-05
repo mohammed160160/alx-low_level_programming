@@ -31,6 +31,7 @@ for (x = 0; x < ac; x++) /*Total length of the compiler*/
 tleng += ac + 1;
 
 s = malloc(tleng * sizeof(char)); /*Declaring the memory*/
+printf("value of tleng = %i", tleng)
 if (s == NULL)
 {
 return (NULL);
