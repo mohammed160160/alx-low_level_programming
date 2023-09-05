@@ -34,7 +34,7 @@ return (NULL);
 for (x = 0;  x < word; x++)
 {
 
-s[x] = malloc(los* sizeof(char));
+s[x] = malloc(los * sizeof(char));
 
 if (s[x] == NULL)
 {
