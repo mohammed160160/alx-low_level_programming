@@ -63,7 +63,7 @@ return (x);
 int word_counter(char *str, int los)
 {
 int x;
-int count;
+int count = 0;
 
 for (x = 0; x < los; x++)
 {
@@ -72,7 +72,6 @@ for (x = 0; x < los; x++)
 	count++;
 	}
 }
-
 
 printf("The number of words here in this string  %i\n", count);
 return (count);
