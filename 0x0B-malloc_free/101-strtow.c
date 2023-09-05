@@ -22,15 +22,14 @@ return (NULL);
 los = string_length(str);
 word = word_counter(str, los);
 
+printf("The number of elements in this string  %i\n", los);
+printf("The number of words in this string  %i\n", word);
 
 s = malloc (word * sizeof(char*));
 if (s == NULL)
 {
 return (NULL);
 }
-
-printf("The number of elements in this string  %i\n", los);
-printf("The number of words in this string  %i\n", word);
 
 
 return (s);
@@ -73,5 +72,6 @@ for (x = 0; x < los; x++)
 	count++;
 	}
 }
+printf("The number of words here in this string  %i\n", count);
 return (count);
 }
