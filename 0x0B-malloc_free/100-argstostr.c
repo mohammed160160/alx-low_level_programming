@@ -17,8 +17,7 @@ if (ac == 0 || av == NULL)
 {
 return (NULL);
 }
-
-for(x = 0; x < ac; x++) /*Total length of the compiler*/
+for (x = 0; x < ac; x++) /*Total length of the compiler*/
 {
 l = 0;
 	while (av[x][l] != '\0')
@@ -32,7 +31,7 @@ s = malloc(tleng + 2 * sizeof(char)); /*Declaring the memory*/
 	{
 	return (NULL);
 	}
-for(x = 0; x < ac; x++)/* giving value to the memory spaces*/
+for (x = 0; x < ac; x++)/* giving value to the memory spaces*/
 {
 l = 0;
 while (av[x][l] != '\0')
