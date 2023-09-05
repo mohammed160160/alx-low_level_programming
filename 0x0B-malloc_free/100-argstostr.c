@@ -11,29 +11,34 @@
 char *argstostr(int ac, char **av)
 {
 char *s;
-int tleng, cleng, l, x, y;
+int tleng, cleng, l, x, y;/*tleng= Totallength - cleng current - l(length of the current array) - xyz variables*/
 
 if (ac == 0 || av == NULL)
 {
 return (NULL);
 }
-for (x = 0; x < ac; x++) /*Total length of the compiler*/
+
+for(x = 0; x < ac; x++) /*Total length of the compiler*/
 {
 l = 0;
-	while (*av[l] != '\0')
-	{
-	l++;
-	}
+while (av[x][l] != '\0')
+{
+l++;
+}
 tleng += l;
 }
-s = malloc((tleng + 1) * sizeof(char)); /*Declaring the memory*/
-	if (s == NULL)
-	{
-	return (NULL);
-	}
-for (x = 0; x < ac; x++)/* giving value to the memory spaces*/
+
+s = malloc(tleng + 1 * sizeof(char)); /*Declaring the memory*/
+if (s == NULL)
 {
+return (NULL);
+}
+
+for(x = 0; x < ac; x++)/* giving value to the memory spaces*/
+{
+
 l = 0;
+
 while (av[x][l] != '\0')
 {
 l++;
