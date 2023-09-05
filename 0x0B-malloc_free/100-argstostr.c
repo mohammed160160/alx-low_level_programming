@@ -26,9 +26,9 @@ while (av[x][l] != '\0')
 l++;
 }
 tleng += l;
-printf("length = %i\n", l);
+printf("length = %i total length = %i\n", l, tleng);
 }
-printf("total length = %i\n", tleng);
+printf("is this part reading or not");
 
 s = malloc(tleng * sizeof(char)); /*Declaring the memory*/
 if (s == NULL)
