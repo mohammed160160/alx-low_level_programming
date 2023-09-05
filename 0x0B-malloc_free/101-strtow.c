@@ -25,7 +25,7 @@ for (a = 0; a < los; a++)/*declaring the sub array*/
 if ((str[a - 1] == 32 || str[a - 1] == '\0') && str[a] != 32)
 	{
 	wlength = length_of_word(str, a);
-	s[b]  = malloc((wlength + 1)* sizeof(char));
+	s[b]  = malloc((wlength + 1) * sizeof(char));
 		if (s[b] == NULL)
 		{
 			for (b = 0; b < word ; b++)
