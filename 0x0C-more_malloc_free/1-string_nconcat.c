@@ -35,6 +35,8 @@ if (x == NULL)
 
 for (y = 0; y < la + n; y++)
 {
+	if ( y > la + lb)
+	{ break; }
 	if (y < la)
 	{ x[y] = s1[y]; }
 	else
