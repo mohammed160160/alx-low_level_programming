@@ -30,7 +30,7 @@ x = malloc((la + n + 1) * sizeof(char));
 
 if (x == NULL)
 {
-	return (NULL);
+return (NULL);
 }
 
 for (y = 0; y < la + n; y++)

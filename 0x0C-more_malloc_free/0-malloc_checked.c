@@ -11,10 +11,18 @@
 
 void *malloc_checked(unsigned int b)
 {
+void *x;
 
-
-
-
+x = malloc(b)
+	
+if (x == NULL)
+{
+exit(0);
+}
+else
+{
+exit(98);
+}
 
 
 }
