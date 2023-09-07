@@ -25,7 +25,7 @@ t = nmemb * size;
 
 x = malloc(t);
 
-if (nmemb == 0 || size == 0)
+if (x == NULL)
 {
 return (NULL);
 }
