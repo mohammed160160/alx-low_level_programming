@@ -11,7 +11,7 @@
 
 int *array_range(int min, int max)
 {
-int* V;
+int *V;
 int d = 0;
 int x = 0;
 
