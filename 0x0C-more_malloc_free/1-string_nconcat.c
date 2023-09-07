@@ -26,6 +26,11 @@ while (s1[la] != '\0')
 while (s2[lb] != '\0')
 { lb++; }
 
+if (n > lb)
+{
+n = lb;
+}
+
 x = malloc((la + n + 1) * sizeof(char));
 
 if (x == NULL)
@@ -33,10 +38,6 @@ if (x == NULL)
 return (NULL);
 }
 
-if (n > lb)
-{
-n = lb;
-}
 
 for (y = 0; y < la + n; y++)
 {
