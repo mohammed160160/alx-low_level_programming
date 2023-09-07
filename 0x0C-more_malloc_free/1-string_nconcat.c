@@ -43,7 +43,7 @@ for (y = 0; y < la + n; y++)
 	{ x[y] = s2[y - la]; }
 }
 
-x[la + n] = '\0'
+x[la + n] = '\0';
 
 return (x);
 }
