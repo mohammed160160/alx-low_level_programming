@@ -3,26 +3,21 @@
 #include <stdlib.h>
 
 /**
- * simple_print_buffer - prints buffer in hexa
- * @buffer: the address of memory to print
- * @size: the size of the memory to print
- * Return: Nothing.
+ * *malloc_checked - Allocates memory space equal to b
+ * @b: the address of memory to print
+ * Return: This should return with exit instead of return
  */
 
 void *malloc_checked(unsigned int b)
 {
 void *x;
 
-x = malloc(b)
-	
+x = malloc(b);
+
 if (x == NULL)
-{
-exit(0);
-}
+{ exit(0); }
 else
-{
-exit(98);
-}
+{ exit(98); }
 
 
 }
