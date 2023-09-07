@@ -28,9 +28,6 @@ while (s2[lb] != '\0')
 
 x = malloc((la + n + 1) * sizeof(char));
 
-if (n > lb)
-{ n = lb; }
-
 if (x == NULL)
 {
 	return (NULL);
