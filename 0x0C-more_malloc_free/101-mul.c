@@ -1,6 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/**
+ * main - Multiply 2 integers
+ * @argc: The argument counter
+ * @argv: The argument vector(array)
+ * Return: 1 if enter more or less than 2 argmuents 0 if Sucessful
+ */
+
 int main(int argc, char *argv[])
 {
 int x = 0;
