@@ -33,7 +33,7 @@ if (x == NULL)
 return (NULL);
 }
 
-if (n > lb)
+if (n >= lb)
 {
 n = lb;
 }
