@@ -33,6 +33,11 @@ if (x == NULL)
 return (NULL);
 }
 
+if (n > lb)
+{
+n = lb;
+}
+
 for (y = 0; y < la + n; y++)
 {
 	if (y < la)
