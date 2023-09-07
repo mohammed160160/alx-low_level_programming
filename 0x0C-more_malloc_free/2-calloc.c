@@ -12,10 +12,9 @@
 
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-void *x;
+char *x;
 unsigned int t;
 unsigned int c;
-int* ci;
 
 if (nmemb == 0 || size == 0)
 {
@@ -31,11 +30,10 @@ if (nmemb == 0 || size == 0)
 return (NULL);
 }
 
-ci = (int*)x;
 for (c = 0; c < t; c++)
 {
-ci[c] = 0;
+x[c] = 0;
 }
 
-return (ci);
+return (x);
 }
