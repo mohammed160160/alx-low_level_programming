@@ -33,7 +33,7 @@ s = malloc(new_size);
 return (s);
 }
 
-s = malloc(new_size + 1);
+s = malloc(new_size);
 if (old_size < new_size)
 {
 	for (x = 0; x < old_size; x++)
