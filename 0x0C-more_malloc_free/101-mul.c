@@ -32,6 +32,6 @@ c = argv[x];
 
 }
 
-printf("%ld\n", atoi(argv[1]) * atoi(argv[2]));
-return (T);
+printf("%i\n", atoi(argv[1]) * atoi(argv[2]));
+return (0);
 }
