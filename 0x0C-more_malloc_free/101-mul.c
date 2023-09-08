@@ -7,11 +7,10 @@
  * @argv: The argument vector(array)
  * Return: 1 if enter more or less than 2 argmuents 0 if Sucessful
  */
-
 int main(int argc, char *argv[])
 {
 int x = 0;
-int T = 0;
+long unsigned int T = 0;
 int z = 0;
 char *c;
 
@@ -36,6 +35,6 @@ c = argv[x];
 }
 
 T = atoi(argv[1]) * atoi(argv[2]);/*Calculates the total*/
-
+printf("%ld\n", T);
 return (T);
 }
