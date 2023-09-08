@@ -38,14 +38,14 @@ if (old_size < new_size)
 {
 	for (x = 0; x < old_size; x++)
 	{
-	s[x] = ((int *)ptr)[x];
+	s[x] = ((char *)ptr)[x];
 	}
 }
 else
 {
 	for (x = 0; x < new_size; x++)
 	{
-	s[x] = ((int *)ptr)[x];
+	s[x] = ((char *)ptr)[x];
 	}
 }
 
