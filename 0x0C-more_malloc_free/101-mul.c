@@ -153,6 +153,7 @@ size = strlen(x) + strlen(y);
 res = multiply(x, y, strlen(x), strlen(y), size);
 finalres = final_result(res, size);
 printf("%s\n", finalres);
+free(finalres);
 return (0);
 }
 
