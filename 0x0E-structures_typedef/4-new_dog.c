@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 #include "dog.h"
 
 /**
@@ -21,9 +22,24 @@ if (Dog == NULL)
 return (NULL);
 }
 
-Dog->name = name;
+Dog->name = malloc(strlen(name) + 1);
+if (Dog->name == NULL)
+{
+free(Dog);
+return (NULL);
+}
+strcpy(Dog->name, name);
+
 Dog->age = age;
-Dog->owner = owner;
+
+Dog->owner = malloc(strlen(owner) + 1);
+if (Dog->owner == NULL)
+{
+free(Dog->name);
+free(Dog);
+return (NULL);
+}
+strcpy(Dog->owner, owner);
 
 return (Dog);
 }
