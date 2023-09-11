@@ -3,7 +3,7 @@
 
 /**
  * init_dog - This structure initializes a variable in the structure
- * @d: The name of the initialized character
+ * @di: The name of the initialized character
  * @name: Writes the name of the dog
  * @age: Writes the age of the dog in float
  * @owner: Writes the owner of the dog
