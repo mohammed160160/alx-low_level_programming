@@ -18,6 +18,11 @@ if (name == NULL)
 return;
 }
 
+if (f == NULL)
+{
+return;
+}
+
 f(name);
 }
 
