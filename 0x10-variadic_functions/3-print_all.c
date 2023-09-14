@@ -34,7 +34,7 @@ while (format[up] != '\0')
 				case 'i': a = va_arg(allvalue, int);print[down].f(&a);break;
 				case 'f': b = va_arg(allvalue, double);print[down].f(&b);break;
 				case 'c': c = va_arg(allvalue, int);print[down].f(&c);break;
-				case 's': d = va_arg(allvalue, char *);print[down].f(&d);break;
+				case 's': d = va_arg(allvalue, char *);print[down].f(d);break;
 			}
 			break;
 		}

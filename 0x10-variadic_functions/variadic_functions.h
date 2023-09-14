@@ -7,10 +7,10 @@ void print_strings(const char *separator, const unsigned int n, ...);
 void print_all(const char * const format, ...);
 
 
-void floatprint(void *f);
-void stringprint(void *s);
-void characterprint(void *c);
-void integerprint(void *i);
+void floatprint(void *x);
+void stringprint(void *x);
+void characterprint(void *x);
+void integerprint(void *x);
 
 
 
