@@ -13,7 +13,7 @@ void print_all(const char * const format, ...)
 {
 va_list allvalue;
 int left = 0, up = 0, down = 0;
-char print[] = "scif", *right;
+char print[] = "scif";
 
 va_start(allvalue, format);
 while (format[up] != '\0')
@@ -37,11 +37,7 @@ left = 0;
 			printf("%c", va_arg(allvalue, int));
 			break;
 			case 's':
-			right = va_arg(allvalue, char *);
-			if (right == NULL)
-			{ printf("(nil)"); }
-			else
-			{ printf("%s", right); }
+			printf("%s", va_arg(allvalue, char *));
 			break;
 			}
 		break;
