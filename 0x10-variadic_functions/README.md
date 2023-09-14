@@ -1,0 +1,1 @@
+To understand variadic functions
