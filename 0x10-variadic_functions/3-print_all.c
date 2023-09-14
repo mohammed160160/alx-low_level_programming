@@ -61,10 +61,7 @@ printf("%f", *(float *)x);
  */
 void stringprint(void *x)
 {
-if ((char *)x == NULL)
-{ printf("(nil)"); }
-else
-{ printf("%s", (char *)x); }
+printf("%s", (char *)x); 
 }
 /**
  * characterprint - prints a character
