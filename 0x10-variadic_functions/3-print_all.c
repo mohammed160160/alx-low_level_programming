@@ -13,7 +13,10 @@
 
 void print_all(const char * const format, ...)
 {
-void *space;
+int a;
+char c;
+char* d;
+float b;
 va_list allvalue;
 int up = 0, down = 0;
 printer print[] = {{"s", stringprint}, {"c", characterprint}, {"i", integerprint}
@@ -28,12 +31,11 @@ while (format[up] != '\0')
 		{
 			switch (format[up])
 			{
-				case 'i': space = va_arg(allvalue, int *);break;
-				case 'f': space = va_arg(allvalue, float *);break;
-				case 'c': space = va_arg(allvalue, char *);break;
-				case 's': space = va_arg(allvalue, char *);break;
+				case 'i': a = va_arg(allvalue, int);print[down].f(&a);break;
+				case 'f': b = va_arg(allvalue, double);print[down].f(&b);break;
+				case 'c': c = va_arg(allvalue, int);print[down].f(&c);break;
+				case 's': d = va_arg(allvalue, char *);print[down].f(&d);break;
 			}
-			print[down].f(space);
 			break;
 		}
 		down++;
