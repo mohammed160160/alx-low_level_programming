@@ -13,9 +13,9 @@
 
 void print_all(const char * const format, ...)
 {
+void *space;
 va_list allvalue;
 int up = 0, down = 0;
-void *space;
 printer print[] = {{"s", stringprint}, {"c", characterprint}, {"i", integerprint}
 , {"f", floatprint}};
 va_start(allvalue, format);

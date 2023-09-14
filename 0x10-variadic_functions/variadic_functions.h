@@ -13,6 +13,7 @@ void characterprint(void *c);
 void integerprint(void *i);
 
 
+
 /**
  * struct letters - decided depending on the letter which identifier to use
  * @c: The indentifier
