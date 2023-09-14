@@ -17,15 +17,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 unsigned int x = 0;
 va_list xyz;
 
-
-if (n <= 0)
-{
-return;
-}
-
 va_start(xyz, n);
-
-
 
 for (x = 0; x < n; x++)
 {
@@ -36,14 +28,9 @@ if (separator != NULL && x != n - 1)
 printf("%s", separator);
 }
 
-if (x ==  n - 1)
-{
-printf("\n");
-}
-
-
 }
 
 va_end(xyz);
 
+printf("\n");
 }
