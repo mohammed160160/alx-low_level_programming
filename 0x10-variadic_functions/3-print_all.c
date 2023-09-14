@@ -21,18 +21,30 @@ printer print[] = {{"s", stringprint}, {"c", characterprint}, {"i", integerprint
 va_start(allvalue, format);
 while (format[up] != '\0')
 {
-	down = 0;
-	left = 0;
+down = 0;
+left = 0;
 	while (down < 4)
 	{
 		if (print[down].c[0] == format[up])
 		{
 			switch (format[up])
 			{
-				case 'i': a = va_arg(allvalue, int);print[down].f(&a);left++;break;
-				case 'f': b = va_arg(allvalue, double);print[down].f(&b);left++;break;
-				case 'c': c = va_arg(allvalue, int);print[down].f(&c);left++;break;
-				case 's': d = va_arg(allvalue, char *);print[down].f(d);left++;break;
+				case 'i': a = va_arg(allvalue, int);
+				print[down].f(&a);
+				left++;
+				break;
+				case 'f': b = va_arg(allvalue, double);
+				print[down].f(&b);
+				left++;
+				break;
+				case 'c': c = va_arg(allvalue, int);
+				print[down].f(&c);
+				left++;
+				break;
+				case 's': d = va_arg(allvalue, char *);
+				print[down].f(d);
+				left++;
+				break;
 			}
 			break;
 		}
