@@ -63,33 +63,25 @@ printf("\n");
  * Return: Nothing since it's a print function
  */
 void floatprint(void *x)
-{
-printf("%f", *(float *)x);
-}
+{ printf("%f", *(float *)x); }
 /**
  * stringprint - prints a string
  * @x: A void pointer to the location
  * Return: Nothing since it's a print function
  */
 void stringprint(void *x)
-{
-printf("%s", (char *)x); 
-}
+{ printf("%s", (char *)x); }
 /**
  * characterprint - prints a character
  * @x: A void pointer to the location
  * Return: Nothing since it's a print function
  */
 void characterprint(void *x)
-{
-printf("%c", *(char *)x);
-}
+{ printf("%c", *(char *)x); }
 /**
  * integerprint - prints an integer
  * @x: A void pointer to the location
  * Return: Nothing since it's a print function
  */
 void integerprint(void *x)
-{
-printf("%i", *(int *)x);
-}
+{ printf("%i", *(int *)x); }
