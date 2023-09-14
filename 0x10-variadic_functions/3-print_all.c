@@ -46,6 +46,7 @@ left = 0;
 if (format[up + 1] != '\0' && left == 1)
 { printf(", "); }
 up++;
+
 }
 
 va_end(allvalue);
