@@ -18,7 +18,7 @@ unsigned int x = 0;
 va_list xyz;
 
 
-if (n == 0)
+if (n <= 0)
 {
 return;
 }
