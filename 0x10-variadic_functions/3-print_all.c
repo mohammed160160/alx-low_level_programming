@@ -2,7 +2,6 @@
 #include <stdarg.h>
 #include <stdlib.h>
 #include "variadic_functions.h"
-
 /**
  * print_all - prints all argument in the format specified
  * @*: to ensure format doesnt change
@@ -10,22 +9,20 @@
  * @...: The arguments
  * Return: Nothing since it's a print function
  */
-
 void print_all(const char * const format, ...)
 {
-int a;
 char c;
 char* d;
 float b;
 va_list allvalue;
-int up = 0, down = 0;
+int a, up = 0, down = 0;
 printer print[] = {{"s", stringprint}, {"c", characterprint}, {"i", integerprint}
-, {"f", floatprint},{NULL, NULL}};
+, {"f", floatprint}};
 va_start(allvalue, format);
 while (format[up] != '\0')
 {
 	down = 0;
-	while (print[down].c != NULL)
+	while (down < 4)
 	{
 		if (print[down].c[0] == format[up])
 		{
@@ -42,10 +39,7 @@ while (format[up] != '\0')
 	}
 	
 if (format[up + 1] != '\0')
-{
-printf(", ");
-}
-
+{ printf(", "); }
 up++;
 }
 va_end(allvalue);
