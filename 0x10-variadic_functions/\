@@ -20,12 +20,12 @@ float b;
 va_list allvalue;
 int up = 0, down = 0;
 printer print[] = {{"s", stringprint}, {"c", characterprint}, {"i", integerprint}
-, {"f", floatprint},{NULL, NULL}};
+, {"f", floatprint}};
 va_start(allvalue, format);
 while (format[up] != '\0')
 {
 	down = 0;
-	while (print[down].c != NULL)
+	while (print[down].c != '\0')
 	{
 		if (print[down].c[0] == format[up])
 		{
@@ -40,17 +40,12 @@ while (format[up] != '\0')
 		}
 		down++;
 	}
-	
-if (format[up + 1] != '\0')
-{
-printf(", ");
-}
-
 up++;
 }
 va_end(allvalue);
 printf("\n");
 }
+
 /**
  * floatprint - prints a float
  * @x: A void pointer to the location
