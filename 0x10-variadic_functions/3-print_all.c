@@ -14,23 +14,33 @@
 
 void print_all(const char * const format, ...)
 {
-void* space;
+
 va_list allvalue;
-format selection[] = {{"s",, "c", "i", "f"};
 int up = 0;
+int down = 0;
+void* space;
 
-va_start(allvalue, (strlen(format) + 1));
+printer print[] = {{"s",stringprint},{"c",characterprint} ,{"i", integerprint}
+,{"f", floatprint}};
 
-while(count < (strlen(format) + 1))
+va_start(allvalue, format);
+
+while(format[up] != '\0')
 {
-space = va_arg()
+down = 0;
+space = va_arg(allvalue, void*);
 
-if (format[up] == s || format[up] == i || format[up] == f || format[up] == c)
-{
-selection();
-}
-
-count++;
+	while(print[down].c[0] != '\0')
+	{
+		if (strcmp(print[down].c, &format[up]) == 0)	
+		{
+		print[down].f(space);
+		break;
+		}
+	down++;
+	}	
+		
+up++;
 }
 
 va_end(allvalue);
@@ -46,9 +56,9 @@ printf("\n");
  * Return: Nothing since it's a print function
  */
 
-void floatprint(float f)
+void floatprint(void* f)
 {	
-printf("%f", f)
+printf("%f", *(float*)f);
 }
 
 
@@ -61,9 +71,9 @@ printf("%f", f)
  * Return: Nothing since it's a print function
  */
 
-void stringprint(char *s)
+void stringprint(void* s)
 {
-printf("%s", s)
+printf("%s", (char*)s);
 }
 
 /**
@@ -74,9 +84,9 @@ printf("%s", s)
  * Return: Nothing since it's a print function
  */
 
-void characterprint(char c)
+void characterprint(void* c)
 {
-printf("%c", c)
+printf("%c", *(char*)c);
 }
 
 /**
@@ -87,7 +97,7 @@ printf("%c", c)
  * Return: Nothing since it's a print function
  */
 
-void integerprint(int i)
+void integerprint(void* i)
 {
-printf("%i", i)
+printf("%i", *(int*)i);
 }	

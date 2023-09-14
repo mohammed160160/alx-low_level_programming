@@ -12,13 +12,17 @@ void print_all(const char * const format, ...);
  * @The character: The operator
  * @f: The function associated
  */
+
 typedef struct letters
 {
     char *c;
-    void (*f)(void);
+    void (*f)(void*);
 } printer;
 
-
+void floatprint(void *f);
+void stringprint(void *s);
+void characterprint(void *c);
+void integerprint(void *i);
 
 
 
