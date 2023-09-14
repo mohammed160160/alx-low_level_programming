@@ -13,6 +13,7 @@ void print_all(const char * const format, ...)
 {
 va_list allvalue;
 int left = 0, up = 0;
+char *right;
 
 va_start(allvalue, format);
 while (format[up] != '\0')
@@ -34,7 +35,8 @@ left = 0;
 	left++;
 	break;
 	case 's':
-	printf("%s", va_arg(allvalue, char *));
+	right = va_arg(allvalue, char *);
+	print_string(right);
 	left++;
 	break;
 	default:
@@ -48,4 +50,22 @@ up++;
 
 va_end(allvalue);
 printf("\n");
+}
+
+
+/**
+ * print_string - prints the different options for string
+ * @s: The string
+ * Return: Nothing since it's a print function
+ */
+
+
+void print_string(char *s)
+{
+if (s == NULL)
+{
+printf("(nil)");
+return;
+}
+printf("%s", s);
 }
