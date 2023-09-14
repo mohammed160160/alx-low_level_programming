@@ -24,23 +24,20 @@ left = 0;
 	{
 	if (print[down] == format[up])
 	{
+		left++;
 		switch (format[up])
 		{
 		case 'i':
 		printf("%i", va_arg(allvalue, int));
-		left++;
 		break;
 		case 'f':
 		printf("%f", va_arg(allvalue, double));
-		left++;
 		break;
 		case 'c':
 		printf("%c", va_arg(allvalue, int));
-		left++;
 		break;
 		case 's':
 		printf("%s", va_arg(allvalue, char *));
-		left++;
 		break;
 		}
 	break;
