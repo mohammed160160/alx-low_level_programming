@@ -14,90 +14,69 @@
 
 void print_all(const char * const format, ...)
 {
-
 va_list allvalue;
-int up = 0;
-int down = 0;
-void* space;
-
-printer print[] = {{"s",stringprint},{"c",characterprint} ,{"i", integerprint}
-,{"f", floatprint}};
-
+int up = 0, down = 0;
+void *space;
+printer print[] = {{"s", stringprint}, {"c", characterprint}, {"i", integerprint}
+, {"f", floatprint}};
 va_start(allvalue, format);
-
-while(format[up] != '\0')
+while (format[up] != '\0')
 {
-down = 0;
-space = va_arg(allvalue, void*);
-
-	while(print[down].c[0] != '\0')
+	down = 0;
+	while (print[down].c[0] != '\0')
 	{
-		if (strcmp(print[down].c, &format[up]) == 0)	
+		if (print[down].c[0] == format[up])
 		{
-		print[down].f(space);
-		break;
+			switch (format[up])
+			{
+				case 'i': space = va_arg(allvalue, int *);break;
+				case 'f': space = va_arg(allvalue, float *);break;
+				case 'c': space = va_arg(allvalue, char *);break;
+				case 's': space = va_arg(allvalue, char *);break;
+			}
+			print[down].f(space);
+			break;
 		}
-	down++;
-	}	
-		
+		down++;
+	}
 up++;
 }
-
 va_end(allvalue);
 printf("\n");
 }
-
-
 /**
- * print_all - prints all argument in the format specified
- * @*: to ensure format doesnt change
- * @format: The format for each argument
- * @...: The arguments
+ * floatprint - prints a float
+ * @x: A void pointer to the location
  * Return: Nothing since it's a print function
  */
-
-void floatprint(void* f)
-{	
-printf("%f", *(float*)f);
-}
-
-
-
-/**
- * print_all - prints all argument in the format specified
- * @*: to ensure format doesnt change
- * @format: The format for each argument
- * @...: The arguments
- * Return: Nothing since it's a print function
- */
-
-void stringprint(void* s)
+void floatprint(void *x)
 {
-printf("%s", (char*)s);
+printf("%f", *(float *)x);
 }
-
 /**
- * print_all - prints all argument in the format specified
- * @*: to ensure format doesnt change
- * @format: The format for each argument
- * @...: The arguments
+ * stringprint - prints a string
+ * @x: A void pointer to the location
  * Return: Nothing since it's a print function
  */
-
-void characterprint(void* c)
+void stringprint(void *x)
 {
-printf("%c", *(char*)c);
+printf("%s", (char *)x);
 }
-
 /**
- * print_all - prints all argument in the format specified
- * @*: to ensure format doesnt change
- * @format: The format for each argument
- * @...: The arguments
+ * characterprint - prints a character
+ * @x: A void pointer to the location
  * Return: Nothing since it's a print function
  */
-
-void integerprint(void* i)
+void characterprint(void *x)
 {
-printf("%i", *(int*)i);
-}	
+printf("%c", *(char *)x);
+}
+/**
+ * integerprint - prints an integer
+ * @x: A void pointer to the location
+ * Return: Nothing since it's a print function
+ */
+void integerprint(void *x)
+{
+printf("%i", *(int *)x);
+}
