@@ -16,7 +16,7 @@ int left = 0, up = 0;
 char *right;
 
 va_start(allvalue, format);
-while (format[up] != '\0' && format != NULL)
+while (format != NULL && format[up] != '\0')
 {
 left = 0;
 
