@@ -19,7 +19,7 @@ Nextone = malloc(sizeof(list_t));
 
 if (Nextone == NULL)
 {
-return(NULL);
+return (NULL);
 }
 
 Nextone->str = strdup(str);
@@ -28,6 +28,5 @@ Nextone->next = *head;
 
 *head = Nextone;
 
-return(*head);
-
+return (*head);
 }
