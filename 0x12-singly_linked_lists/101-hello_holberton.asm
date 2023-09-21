@@ -6,7 +6,6 @@ section .text
 	global main
 
 main:
-
 	mov rdi,message
 	xor rax,rax
 
