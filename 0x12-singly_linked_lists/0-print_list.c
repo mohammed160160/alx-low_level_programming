@@ -13,11 +13,18 @@ size_t print_list(const list_t *h)
 {
 unsigned int current = 0;
 
-for (current = 1; h->next != NULL; current++)
+for (current = 0; h != NULL ; current++)
 {
-printf("[%u], %s\n",h->len ,h->str);
+		if (h->str == NULL)
+		{
+		printf("[0], (nil)\n");
+		}
+			else
+			{
+			printf("[%u], %s\n",h->len ,h->str);
+			}
 h = h->next;
 }
 
-return (h->len);
+return (current);
 }
