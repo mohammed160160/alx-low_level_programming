@@ -24,15 +24,15 @@ Nextone->str = strdup(str);
 Nextone->len = strlen(str);
 Nextone->next = NULL;
 
-if (*head == NULL)
+if (head == NULL)
 {
 *head = Nextone;
-}
+}	
 	else
 	{
 	Temp = *head;
 
-	while (Temp->next != NULL)
+	while(Temp->next != NULL)
 	{
 	Temp = Temp->next;
 	}
@@ -40,5 +40,5 @@ if (*head == NULL)
 	Temp->next = Nextone;
 	}
 
-return (Nextone);
+return(Temp);
 }
