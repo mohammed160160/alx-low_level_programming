@@ -9,6 +9,5 @@ main:
 
 	call printf
 
-	mov eax, 60
 	xor edi, edi
 	syscall
