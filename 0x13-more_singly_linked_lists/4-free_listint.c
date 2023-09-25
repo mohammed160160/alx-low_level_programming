@@ -15,13 +15,11 @@ if (head == NULL)
 return;
 }
 
-while (head->next != NULL)
+while (head != NULL)
 {
 H = head->next;
 free(head);
 head = H;
 }
-
-free(head);
 
 }
