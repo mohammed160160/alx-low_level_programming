@@ -1,9 +1,11 @@
 #include "lists.h"
 
 /**
- * print_list - prints all the elements of a list_t list
- * @h:A pointer to the first element of the list
- * Return: The number of elements in the linked list
+ * get_nodeint_at_index - Gets the node with the index value given
+ * @head:A pointer to the first element of the list
+ * @index:The number of the element wanted to return
+ * Return: It returns the structure with the index value gives in case of
+ * success or NULL in case of failure
  */
 
 listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
@@ -19,13 +21,11 @@ for (x = 0; x < index; x++)
 {
 	if (head == NULL)
 	{
-	return(NULL);
+	return (NULL);
 	}
 
 head = head->next;
 }
 
-return(head);
-
-
+return (head);
 }
