@@ -17,16 +17,18 @@ if (*head == NULL || head == NULL)
 return (NULL);
 }
 
-
-(*head)->next
-
 I = *head;
 J = NULL;
 
-while(head != NULL)
+while(*head != NULL)
 {
-
+*head = (*head)->next;
+I->next = J;
+J = I;
+I = *head;
 }
+
+*head = J;
 
 return (*head);
 }
