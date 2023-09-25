@@ -22,4 +22,5 @@ free(*head);
 *head = H;
 }
 
+free(**head);
 }
