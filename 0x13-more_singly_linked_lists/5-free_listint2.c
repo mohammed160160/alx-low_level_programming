@@ -12,15 +12,14 @@ listint_t *H;
 
 if (*head == NULL)
 {
-	return;
+return;
 }
 
-while (*head != NULL && head != NULL)
-	{
-	H = (*head)->next;
-	free(*head);
-	*head = H;
-	}
+while (*head != NULL)
+{
+H = (*head)->next;
+free(*head);
+*head = H;
+}
 
-	*head = NULL;
 }
