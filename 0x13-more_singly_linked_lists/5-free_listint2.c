@@ -22,4 +22,5 @@ H = *head;
 free(H);
 }
 
+*head = NULL;
 }
