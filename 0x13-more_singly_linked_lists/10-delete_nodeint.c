@@ -29,7 +29,11 @@ return (1);
 }
 
 for (x = 0; x < index - 1; x++)
-{ J = J->next; }
+{
+if (J == NULL)
+{ return (-1); }
+J = J->next;
+}
 
 if (J != NULL)
 {
