@@ -1,16 +1,27 @@
 #include "lists.h"
 
 /**
- * print_list - prints all the elements of a list_t list
- * @h:A pointer to the first element of the list
- * Return: The number of elements in the linked list
+ * pop_listint - deletes the head node of a listint_t linked list,
+ * and returns the head node’s data (n).
+ * @head:A pointer to the first element of the list
+ * Return: head node’s data or 0 if failed
  */
 
-int pop_listint(listint_t **head);
-
-if (index == 0)
+int pop_listint(listint_t **head)
 {
-*head = J->next;
-free(J);
-return (1);
+int x = 0;
+listint_t *H;
+
+
+if (*head == NULL)
+{
+return (0);
+}
+
+H = (*head)->next;
+x = (*head)->n;
+free(*head);
+*head = H;
+
+return (x);
 }
