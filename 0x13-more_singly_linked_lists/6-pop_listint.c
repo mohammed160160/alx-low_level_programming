@@ -5,3 +5,5 @@
  * @h:A pointer to the first element of the list
  * Return: The number of elements in the linked list
  */
+
+int pop_listint(listint_t **head);
