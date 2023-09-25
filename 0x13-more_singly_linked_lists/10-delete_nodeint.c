@@ -16,28 +16,33 @@ listint_t *J;
 
 unsigned int x = 0;
 
-if (*head == NULL)
-{ return(-1); }
+J = *head;
+
+if (J == NULL)
+{ return (-1); }
 
 if (index == 0)
 {
-free (*head);
-return(1);
+*head = J->next;
+free(J);
+return (1);
 }
 
-J = *head;
+for (x = 0; x < index - 1; x++)
+{ J = J->next; }
 
-for (x = 0; x < index - 1;x++)
+if (J != NULL)
 {
-J = (*head)->next;
-}
-
 H = J;
 J = J->next;
 I = J->next;
 free(J);
 J = H;
 J->next = I;
-
 return (1);
+}
+
+else
+{ return (-1); }
+
 }
