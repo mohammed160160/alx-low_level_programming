@@ -20,7 +20,7 @@ return (NULL);
 I = *head;
 J = NULL;
 
-while(*head != NULL)
+while (*head != NULL)
 {
 *head = (*head)->next;
 I->next = J;
