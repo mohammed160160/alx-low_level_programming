@@ -18,7 +18,7 @@ unsigned int x = 0;
 
 J = *head;
 
-if (head == NULL || *head == NULL)
+if (*head == NULL)
 { return (-1); }
 
 if (index == 0)

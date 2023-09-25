@@ -7,3 +7,10 @@
  */
 
 int pop_listint(listint_t **head);
+
+if (index == 0)
+{
+*head = J->next;
+free(J);
+return (1);
+}
