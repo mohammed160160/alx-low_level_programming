@@ -10,8 +10,6 @@ void free_listint2(listint_t **head)
 {
 listint_t *H;
 
-H = malloc(sizeof(listint_t));
-
 if (*head == NULL)
 {
 return;
@@ -25,6 +23,5 @@ free(*head);
 }
 
 free(*head);
-free(H);
 
 }
