@@ -16,12 +16,10 @@ return;
 }
 
 while (*head != NULL)
-{
-H = (*head)->next;
-free(*head);
-*head = H;
+{	
+H = *head;
+*head = (*head)->next;
+free(H);
 }
-
-free(*head);
 
 }
