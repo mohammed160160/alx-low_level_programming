@@ -15,9 +15,8 @@ if (head == NULL)
 return;
 }
 
-
 while (*head != NULL)
-{	
+{
 H = *head;
 *head = (*head)->next;
 free(H);
