@@ -32,6 +32,7 @@ else
 	{
 	free(*h);
 	freed++;
+	*h == NULL;
 	break;
 	}
 }
