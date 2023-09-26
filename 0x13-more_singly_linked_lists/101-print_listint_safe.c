@@ -18,7 +18,7 @@ X = Z;
 		while (head != X)
 		{
 		X = X->next;
-			if (head != X && X->next == head->next)
+			if ((X->next == head->next) && (head != X))
 			{
 			head = head->next;
 			printf("-> [%p] %i\n", (void *)head, head->n);
