@@ -1,27 +1,30 @@
 #include "lists.h"
 
 /**
- * free_listint2 - frees a linked list of listint_t.
- * @head:A pointer to the first structure of the list.
+ * free_listint_safe - frees a linked list of listint_t.
+ * @h:A pointer to the first structure of the list.
  * Return: Nothing since it frees a structure
  */
 
 size_t free_listint_safe(listint_t **h)
 {
 listint_t *H;
+unsigned int freed = 0;
 
-if (head == NULL)
+if (h == NULL)
 {
-return;
+return (freed);
 }
 
 while (H != NULL)
 {
-H = (*head)->next;
-free(*head);
-*head = H;
+H = (*h)->next;
+free(*h);
+*h = H;
+freed++;
 }
 
-free(*head);
-*head = NULL;
+free(*h);
+*h = NULL;
+return (freed);
 }
