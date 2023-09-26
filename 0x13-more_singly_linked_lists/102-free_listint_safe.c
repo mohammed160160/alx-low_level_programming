@@ -10,7 +10,7 @@ size_t free_listint_safe(listint_t **h)
 {
 listint_t *H;
 unsigned int freed = 0;
-int checker = 0;
+long int checker = 0;
 
 if (h == NULL || *h == NULL)
 {
