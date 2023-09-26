@@ -32,12 +32,8 @@ Y = Y->next;
 
 	if ((X == Y) &&(X != NULL))
 	{
-	printf("[%p] %i\n", (void *)X, X->n);
-	X = X->next;
-	printf("[%p] %i\n", (void *)X, X->n);
-	X = X->next;
 	printf("-> [%p] %i\n", (void *)X, X->n);
-	return (length + 3);
+	return (length + 1);
 	}
 
 }
