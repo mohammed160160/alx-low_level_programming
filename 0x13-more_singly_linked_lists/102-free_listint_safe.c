@@ -12,23 +12,22 @@ listint_t *H;
 unsigned int freed = 0;
 int checker = 0;
 
-if (*h == NULL)
+if (h == NULL || *h == NULL)
 { return (freed); }
 
 while (*h != NULL)
 {
-
-if ((*h)->next != NULL)
-{
-checker = *h - (*h)->next;
-}
-	else
+	if ((*h)->next != NULL)
 	{
-	free(*h);
-	*h = NULL;
-	freed++;
-	break;
+	checker = *h - (*h)->next;
 	}
+		else
+		{
+		free(*h);
+		*h = NULL;
+		freed++;
+		break;
+		}
 
 if (checker > 0)
 {
