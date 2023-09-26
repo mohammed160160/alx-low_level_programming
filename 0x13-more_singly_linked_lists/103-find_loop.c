@@ -1,3 +1,5 @@
+#include "lists.h"
+
 /**
  * find_listint_loop -  function that finds the loop in a linked list.
  * @head:A pointer to the first element of the list
