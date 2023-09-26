@@ -17,17 +17,7 @@ if (h == NULL || *h == NULL)
 
 while (*h != NULL)
 {
-	if ((*h)->next != NULL)
-	{
-	checker = *h - (*h)->next;
-	}
-		else
-		{
-		free(*h);
-		*h = NULL;
-		freed++;
-		break;
-		}
+checker = *h - (*h)->next;
 
 if (checker > 0)
 {
@@ -46,6 +36,7 @@ freed++;
 	}
 }
 
+free(*h);
 *h = NULL;
 return (freed);
 }
