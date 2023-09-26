@@ -23,14 +23,16 @@ X = X->next;
 if (Y != NULL)
 {
 Y = Y->next;
-if (Y != NULL)
-{ Y = Y->next; }
+	if (Y != NULL)
+	{
+	Y = Y->next;
+	}
 }
 
-if ((X == Y) && (X != NULL))
+if ((X == Y) &&(X != NULL))
 {
 printf("-> [%p] %i\n", (void *)X, X->n);
-return (length);
+return (length + 1);
 }
 
 }
