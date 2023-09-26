@@ -31,12 +31,12 @@ if (checker > 0)
 
 else
 	{
+	free(*h);
+	freed++;
 	break;
 	}
 }
 
-free(*h);
 *h = NULL;
-
-return (freed + 1);
+return (freed);
 }
