@@ -20,9 +20,10 @@ X = Z;
 		X = X->next;
 			if ((X->next == head->next) && (head != X))
 			{
+			printf("[%p] %i\n", (void *)head, head->n);
 			head = head->next;
 			printf("-> [%p] %i\n", (void *)head, head->n);
-			return (length);
+			return (length + 1);
 			}
 		}
 
