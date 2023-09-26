@@ -13,23 +13,32 @@ unsigned int freed = 0;
 int checker = 0;
 
 if (*h == NULL)
-{
-return (0);
-}
+{ return (freed); }
 
 while (*h != NULL)
 {
-checker = *h - (*h)->next;
 
-if (checker > 0)
+if ((*h)->next != NULL)
+{
+checker = *h - (*h)->next;
+}
+	else
 	{
-	H = (*h)->next;
 	free(*h);
-	*h = H;
+	*h = NULL;
 	freed++;
+	break;
 	}
 
-else
+if (checker > 0)
+{
+H = (*h)->next;
+free(*h);
+*h = H;
+freed++;
+}
+
+	else
 	{
 	free(*h);
 	*h = NULL;
