@@ -12,7 +12,7 @@ listint_t *H;
 unsigned int freed = 0;
 int checker = 0;
 
-if (h == NULL || *h == NULL)
+if (*h == NULL)
 {
 return (0);
 }
