@@ -28,6 +28,7 @@ if (checker > 0)
 	*h = H;
 	freed++;
 	}
+
 else
 	{
 	free(*h);
@@ -36,7 +37,7 @@ else
 	}
 }
 
+free(*h);
 *h = NULL;
-
 return (freed);
 }
