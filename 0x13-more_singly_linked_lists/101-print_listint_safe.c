@@ -9,28 +9,31 @@
 size_t print_listint_safe(const listint_t *head)
 {
 unsigned int length = 0;
-const listint_t *Z = head;
 const listint_t *X = head;
+const listint_t *Y = head;
 
 
-for (length = 0; head != NULL ; length++)
+for (length = 0; X != NULL; length++)
 {
-X = Z;
+printf("[%p] %i\n", (void *)X, X->n);
 
-while (head != X)
-{
+
 X = X->next;
 
-if ((head != X) && (X->next == head->next))
+if (Y != NULL)
 {
-	printf("[%p] %i\n", (void *)head, head->n);
-	head = head->next;
-	printf("-> [%p] %i\n", (void *)head, head->n);
-	return (length + 1);
-	}
+Y = Y->next;
+if (Y != NULL)
+{ Y = Y->next; }
 }
-printf("[%p] %i\n", (void *)head, head->n);
-head = head->next;
+
+if ((X == Y) && (X != NULL))
+{
+printf("-> [%p] %i\n", (void *)X, X->n);
+return (length);
 }
+
+}
+
 return (length);
 }
