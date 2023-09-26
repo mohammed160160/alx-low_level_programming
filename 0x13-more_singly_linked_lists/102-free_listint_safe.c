@@ -10,21 +10,32 @@ size_t free_listint_safe(listint_t **h)
 {
 listint_t *H;
 unsigned int freed = 0;
+int checker = 0;
 
-if (h == NULL)
+if (h == NULL || *h == NULL)
 {
 return (freed);
 }
 
-while (H != NULL)
+while (*h != NULL)
 {
-H = (*h)->next;
-free(*h);
-*h = H;
-freed++;
+checker = *h - (*h)->next;
+
+if (checker > 0)
+	{
+	H = (*h)->next;
+	free(*h);
+	*h = H;
+	freed++;
+	}
+else
+	{
+	free(*h);
+	freed++;
+	break;
+	}
 }
 
-free(*h);
 *h = NULL;
 
 return (freed);
