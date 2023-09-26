@@ -12,24 +12,25 @@ unsigned int length = 0;
 const listint_t *Z = head;
 const listint_t *X = head;
 
+
 for (length = 0; head != NULL ; length++)
 {
 X = Z;
-		while (head != X)
-		{
-		X = X->next;
-			if ((X->next == head->next) && (head != X))
-			{
-			printf("[%p] %i\n", (void *)head, head->n);
-			head = head->next;
-			printf("-> [%p] %i\n", (void *)head, head->n);
-			return (length + 1);
-			}
-		}
 
+while (head != X)
+{
+X = X->next;
+
+if ((head != X) && (X->next == head->next))
+{
+	printf("[%p] %i\n", (void *)head, head->n);
+	head = head->next;
+	printf("-> [%p] %i\n", (void *)head, head->n);
+	return (length + 1);
+	}
+}
 printf("[%p] %i\n", (void *)head, head->n);
 head = head->next;
 }
-
 return (length);
 }
