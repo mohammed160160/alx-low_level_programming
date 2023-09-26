@@ -12,24 +12,28 @@ listint_t *X = head;
 listint_t *Y = head;
 
 
-while (X != NULL)
+if (X == NULL)
 {
-X = X->next;
-
-if (Y != NULL)
-{
-Y = Y->next;
-        if (Y != NULL)
-        {
-        Y = Y->next;
-        }
+	return (NULL);
 }
 
-        if ((X == Y) &&(X != NULL))
-        {
-        return (X);
-        }
 
+
+while (X != NULL && Y != NULL && Y->next != NULL)
+{
+X = X->next;
+Y = Y->next->next;
+
+		if (X == Y)
+		{
+			X = head;
+			while (X != Y)
+			{
+			X = X->next;
+			Y = Y->next;
+			}
+		return (Y);
+		}
 }
 
 return (NULL);

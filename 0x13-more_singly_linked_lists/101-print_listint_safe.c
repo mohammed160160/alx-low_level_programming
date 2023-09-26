@@ -21,13 +21,15 @@ printf("[%p] %i\n", (void *)X, X->n);
 X = X->next;
 
 if (Y != NULL)
-{
-
+{	
 Y = Y->next;
+
 	if (Y != NULL)
 	{
 	Y = Y->next;
 	}
+
+
 }
 
 	if ((X == Y) &&(X != NULL))
