@@ -26,5 +26,6 @@ freed++;
 
 free(*h);
 *h = NULL;
+
 return (freed);
 }

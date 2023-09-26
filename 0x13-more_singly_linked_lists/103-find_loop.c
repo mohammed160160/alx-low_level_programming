@@ -8,8 +8,8 @@
 
 listint_t *find_listint_loop(listint_t *head)
 {
-const listint_t *X = head;
-const listint_t *Y = head;
+listint_t *X = head;
+listint_t *Y = head;
 
 
 while (X != NULL)
