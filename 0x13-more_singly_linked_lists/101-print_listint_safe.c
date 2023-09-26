@@ -29,11 +29,11 @@ Y = Y->next;
 	}
 }
 
-if ((X == Y) &&(X != NULL))
-{
-printf("->id [%p] %i\n", (void *)X, X->n);
-return (length + 1);
-}
+	if ((X == Y) &&(X != NULL))
+	{
+	printf("-> [%p] %i\n", (void *)X, X->n);
+	return (length + 1);
+	}
 
 }
 
