@@ -13,12 +13,12 @@ unsigned long int bit = 1;
 unsigned int x = 0;
 int byte = 0;
 
-for (x = 0;x != index; x++)
+for (x = 0; x != index; x++)
 {
 bit = bit << 1;
 }
 
 byte = *n | bit;
 
-return(byte);
+return (byte);
 }
