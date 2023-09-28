@@ -25,7 +25,7 @@ if (sizeof(*n) > sizeof(int))
 return (-1);
 }
 
-byte = *n;
+byte = n;
 
 return (byte);
 }
