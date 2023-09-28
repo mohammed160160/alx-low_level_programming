@@ -28,7 +28,7 @@ if ((n & X) == 0 && y == 1)
 _putchar('0');
 }
 	
-	else if ((n & X) == 1)	
+	else if ((n & X) != 0)	
 	{
 	_putchar('1');
 	y = 1;
