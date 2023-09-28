@@ -10,22 +10,16 @@
 int set_bit(unsigned long int *n, unsigned int index)
 {
 unsigned long int bit = 1;
-unsigned int x = 0;
 int byte = 0;
 
-if (sizeof(*n) * 8 <= index)
+if (sizeof(n) * 8 < index)
 {
 return (-1);
 }
 
+bit = bit << index;
 
-
-for (x = 0; x != index; x++)
-{
-bit = bit << 1;
-}
-
-*n = (*n | bit);
+*n = *n | bit;
 
 byte = *n;
 
