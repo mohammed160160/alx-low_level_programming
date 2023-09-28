@@ -9,6 +9,13 @@
 
 int set_bit(unsigned long int *n, unsigned int index)
 {
+
+if (sizeof(*n) * 8 <= index)
+{
+return (-1);
+}
+
+
 unsigned long int bit = 1;
 unsigned int x = 0;
 int byte = 0;
@@ -19,11 +26,6 @@ bit = bit << 1;
 }
 
 *n = (*n | bit);
-
-if (sizeof(*n) * 8 <= index)
-{
-return (-1);
-}
 
 byte = *n;
 
