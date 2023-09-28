@@ -2,8 +2,8 @@
 
 
 /**
- * main - check the code
- *
+ * print_binary - check the code
+ * @n: 
  * Return: Always 0.
  */
 

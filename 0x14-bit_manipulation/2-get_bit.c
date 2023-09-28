@@ -2,8 +2,9 @@
 
 
 /**
- * main - check the code
- *
+ * get_bit - check the code
+ * @n:
+ * @index:
  * Return: Always 0.
  */
 
