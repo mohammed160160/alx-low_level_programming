@@ -18,7 +18,9 @@ for (x = 0; x != index; x++)
 bit = bit << 1;
 }
 
-byte = *n | bit;
+*n = (*n | bit);
+
+byte = *n;
 
 return (byte);
 }
