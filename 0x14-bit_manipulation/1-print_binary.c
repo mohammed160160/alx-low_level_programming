@@ -1,6 +1,5 @@
 #include "main.h"
 
-
 /**
  * print_binary - check the code
  * @n: 
@@ -8,3 +7,18 @@
  */
 
 void print_binary(unsigned long int n)
+{
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

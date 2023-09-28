@@ -16,7 +16,7 @@ unsigned int y = 0;
 unsigned int z = 0;
 unsigned int value = 0;
 
-if (*b == '\0')
+if (*b == '\0') 
 { return (0); }
 
 
