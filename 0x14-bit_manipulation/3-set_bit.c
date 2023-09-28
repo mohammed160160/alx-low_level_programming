@@ -20,6 +20,11 @@ bit = bit << 1;
 
 *n = (*n | bit);
 
+if (sizeof(*n) > sizeof(int))
+{
+return (-1);
+}
+
 byte = *n;
 
 return (byte);
