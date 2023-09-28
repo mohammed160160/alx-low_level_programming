@@ -19,10 +19,8 @@ return (-1);
 
 bit = bit << index;
 
-*n = *n | bit;
-
-
+*n = *n & ~bit;
 
 return (1);
 }
-}
+
