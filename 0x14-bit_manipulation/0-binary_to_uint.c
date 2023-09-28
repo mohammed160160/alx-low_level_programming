@@ -15,7 +15,7 @@ unsigned int x = 1;
 unsigned int y = 0, z = 0, value = 0;
 
 
-if (*b == '\0' || b == NULL)
+if (b == NULL || *b == '\0')
 {
 return (0);
 }
@@ -25,7 +25,7 @@ while (b[y] != '\0')
 y++;
 }
 
-for (z = 1; y - z != 0; z++)
+for (z = 1; y >= z ; z++)
 {
 	if (b[y - z] != '0' && b[y - z] != '1')
 	{
