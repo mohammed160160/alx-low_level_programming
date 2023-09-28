@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
- * set_bit - sets the value of a bit to 1 at a given index.
- * @n:A number.
- * @index:The index starting from 0 of the bit you want to set.
- * Return: 1 if it worked, or -1 if an error occurred.
+ * flip_bits - sets the value of a bit to 1 at a given index.
+ * @n: The first number.
+ * @m: The second number.
+ * Return: The number of different bits
  */
 
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
