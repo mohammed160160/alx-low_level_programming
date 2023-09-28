@@ -20,7 +20,7 @@ bit = bit << 1;
 
 *n = (*n | bit);
 
-if (sizeof(*n) > sizeof(int))
+if (sizeof(*n) * 8 <= index)
 {
 return (-1);
 }
