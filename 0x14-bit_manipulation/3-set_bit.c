@@ -13,7 +13,7 @@ unsigned long int bit = 1;
 
 int byte = 0;
 
-if (sizeof(n) * 8 < index)
+if (sizeof(int) * 8 < index)
 {
 return (-1);
 }
