@@ -21,7 +21,7 @@ bit = bit << index;
 
 *n = *n | bit;
 
-byte = *n;
+byte = n;
 
 return (byte);
 }
