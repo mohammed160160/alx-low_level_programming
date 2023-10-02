@@ -15,7 +15,7 @@ int files = 0;
 if (filename == NULL)
 { return (-1); }
 
-files = open(filename, O_RDWR | O_CREAT, 0600);
+files = open(filename, O_RDWR | O_CREAT | O_TRUNC, 0600);
 
 if (files == -1)
 { return (-1); }
