@@ -58,19 +58,22 @@ exit(99);
 }
 /**********************************************************/
 free(L);
-checker = close(filefrom);
-if (checker == -1)
-{ 
-dprintf(STDERR_FILENO, "Error: Can't close fd %i\n", filefrom);
-exit(100);
-}
-
-checker = close(fileto);
-if (checker == -1)
-{
-dprintf(STDERR_FILENO, "Error: Can't close fd %i\n", fileto);
-exit(100);
-}
-
+filecloser(checker, filefrom);
+filecloser(checker, fileto);
 return (0);
+}
+
+/**
+ * closer - closes a file
+ * @file: The value of the filedescriptor
+ * Return: 0 or an error 100.
+ */
+void filecloser(ssize_t checker, int file)
+{
+checker = close(file);
+	if (checker == -1)
+	{
+	dprintf(STDERR_FILENO, "Error: Can't close fd %i\n", file);
+	exit(100);
+	}
 }
