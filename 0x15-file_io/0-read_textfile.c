@@ -9,14 +9,16 @@
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-char L[letters];
-unsigned long int checker = 0;
-unsigned long int R = 0;
+char *L;
+int checker = 0;
+int files = 0;
+
+L =malloc(letters * sizeof(char));
 
 if (filename == NULL)
 { return (0); }
 
-int files = open(filename,O_RDONLY)
+files = open(filename,O_RDONLY);
 
 if (files == -1)
 { return (0); }
@@ -25,12 +27,11 @@ checker = read(files,L,letters);
 if (checker == -1)
 { return (0); }
 
-R = checker;
-
 checker = write(STDOUT_FILENO,L,checker);
 if (checker == -1)
 { return (0); }
 
+free(L);
 close(files);
 return (checker);
 }
