@@ -45,19 +45,19 @@ if (reader == -1)
 }
 
 free(L);
-filecloser(reader, filefrom);
-filecloser(writer, fileto);
+filecloser(filefrom);
+filecloser(fileto);
 return (0);
 }
 
 /**
  * filecloser - closes a file
  * @file: The value of the filedescriptor
- * @checker: Checks for errors in closing
  * Return: 0 or an error 100.
  */
-void filecloser(int checker, int file)
+void filecloser(int file)
 {
+	int checker = 0;
 	checker = close(file);
 	if (checker == -1)
 	{ dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file);
