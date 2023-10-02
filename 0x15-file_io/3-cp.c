@@ -10,8 +10,7 @@
 
 int main(int argc, char **argv)
 {
-ssize_t reader = 0, writer = 0;
-int fileto = 0, filefrom = 0;
+int fileto = 0, filefrom = 0, reader = 0, writer = 0;
 char *L;
 
 if (argc != 3) /*Checks if there's 2 other arguments*/
@@ -21,6 +20,7 @@ exit(97); }
 L = malloc(1024 * sizeof(char)); /*Creates a buffer of 1024*/
 if (L == NULL)
 { Errors(2, argv[2]); }
+
 filefrom = open(argv[1], O_RDONLY); /*Opening the fromfile*/
 if (filefrom == -1)
 { Errors(1, argv[1]); }
@@ -32,7 +32,7 @@ if (fileto == -1)
 { free(L);
 Errors(2, argv[2]); }
 
-while (reader > 0 && L != NULL)/*A loop in case fromfile has more than 1024 bits*/
+while (reader > 0)/*A loop in case fromfile has more than 1024 bits*/
 {
 writer = write(fileto, L, reader);/*write the content in buffer to fileto*/
 if (writer == -1)
@@ -55,7 +55,7 @@ return (0);
  * @checker: Checks for errors in closing
  * Return: 0 or an error 100.
  */
-void filecloser(ssize_t checker, int file)
+void filecloser(int checker, int file)
 {
 	checker = close(file);
 	if (checker == -1)
