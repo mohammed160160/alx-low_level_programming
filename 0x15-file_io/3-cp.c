@@ -17,6 +17,7 @@ char *L;
 if (argc != 3) /*Checks if there's 2 other arguments*/
 { dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 exit(97); }
+/************************************************************/
 L = malloc(1024 * sizeof(char)); /*Creates a buffer of 1024*/
 if (L == NULL)
 { Errors(2, argv[2]); }
@@ -24,20 +25,29 @@ if (L == NULL)
 filefrom = open(argv[1], O_RDONLY);
 if (filefrom == -1)
 { Errors(1, argv[1]); }
-
 checker = read(filefrom, L, 1024);
 if (checker == -1)
 { Errors(1, argv[1]); }
-/**********************************************************/
 fileto = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
 if (fileto == -1)
 { free(L);
 Errors(2, argv[2]); }
 
+while (checker > 0)
+{
 checker = write(fileto, L, checker);
 if (checker == -1)
 { free(L);
 Errors(2, argv[2]); }
+
+checker = read(filefrom, L, 1024);
+
+fileto = open(argv[2], O_WRONLY | O_APPEND);
+
+if (fileto == -1)
+{ free(L);
+Errors(2, argv[2]); }
+}
 /**********************************************************/
 free(L);
 filecloser(checker, filefrom);
