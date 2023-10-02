@@ -27,7 +27,7 @@ if (filefrom == -1)
 reader = read(filefrom, L, 1024); /*reading the first 1024 bytes from file*/
 if (reader == -1)
 { Errors(1, argv[1]); }
-fileto = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664); /*Opening tofile*/
+fileto = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664); /*Opening tofile*/
 if (fileto == -1)
 { free(L);
 Errors(2, argv[2]); }
