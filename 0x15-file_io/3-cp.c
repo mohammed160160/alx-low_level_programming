@@ -13,12 +13,18 @@ int main(int argc, char **argv)
 ssize_t checker = 0; 
 int fileto = 0, filefrom = 0;
 char *L;
-L = malloc(1024 * sizeof(char));
 
 if (argc != 3)
 {
 dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 exit(97);
+}
+/********************************************************/
+L = malloc(1024 * sizeof(char));
+if (L == NULL)
+{
+dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
+exit(99);
 }
 /********************************************************/
 filefrom = open(argv[1], O_RDONLY);
