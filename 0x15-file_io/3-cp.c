@@ -15,7 +15,7 @@ char *L;
 L = malloc(1024 * sizeof(char));
 if (argc != 3)
 { dprintf(STDERR_FILENO, "Usage: cp file_from file_to");
-exit(98); }
+exit(97); }
 filefrom = open(argv[1], O_RDONLY);
 if (filefrom == -1)
 { dprintf(STDERR_FILENO, "Error: Can't read from file %s", argv[1]);
