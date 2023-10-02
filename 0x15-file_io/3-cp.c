@@ -75,5 +75,5 @@ if (checker == 1)
 	{ dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file); }
 else
 	{ dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file); }
-	exit(97 + checker); 
+	exit(97 + checker);
 }
