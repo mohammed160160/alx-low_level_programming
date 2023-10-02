@@ -19,8 +19,6 @@ if (argc != 3) /*Checks if there's 2 other arguments*/
 exit(97); }
 
 L = malloc(1024 * sizeof(char)); /*Creates a buffer of 1024*/
-if (L == NULL)
-{ Errors(1, argv[1]); }
 
 filefrom = open(argv[1], O_RDONLY); /*Opening the fromfile*/
 if (filefrom == -1)
