@@ -32,7 +32,7 @@ if (fileto == -1)
 { free(L);
 Errors(2, argv[2]); }
 
-while (reader > 0)/*A loop in case fromfile has more than 1024 bits*/
+while (reader > 0 && L != NULL)/*A loop in case fromfile has more than 1024 bits*/
 {
 writer = write(fileto, L, reader);/*write the content in buffer to fileto*/
 if (writer == -1)
