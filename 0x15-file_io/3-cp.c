@@ -58,6 +58,7 @@ return (0);
 void filecloser(int file)
 {
 	int checker = 0;
+
 	checker = close(file);
 	if (checker == -1)
 	{ dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file);
