@@ -9,10 +9,12 @@
 
 int create_file(const char *filename, char *text_content)
 {
+FILE *files;
+files = fopen(filename,"wr")
 
 
 
 
-
-
+fclose(files);
+return(1);
 }

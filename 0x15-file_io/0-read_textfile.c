@@ -9,11 +9,13 @@
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
+FILE *files;
+unsigned long int printed;
+
+files = fopen(filename,"wr")
 
 
 
-
-
-
-
+fclose(files);
+return(printed);
 }

@@ -7,4 +7,20 @@
  * Return: 1 on success or -1 if any conditon failed
  */
 
-int append_text_to_file(const char *filename, char *text_content);
+int append_text_to_file(const char *filename, char *text_content)
+{
+FILE *files;
+files = fopen(filename,"wr");
+
+
+
+
+
+
+
+
+
+
+fclose(files);
+return(1);
+}
