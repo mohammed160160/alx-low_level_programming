@@ -13,21 +13,21 @@ char *L;
 int checker = 0;
 int files = 0;
 
-L =malloc(letters * sizeof(char));
+L = malloc(letters * sizeof(char));
 
 if (filename == NULL)
 { return (0); }
 
-files = open(filename,O_RDONLY);
+files = open(filename, O_RDONLY);
 
 if (files == -1)
 { return (0); }
 
-checker = read(files,L,letters);
+checker = read(files, L, letters);
 if (checker == -1)
 { return (0); }
 
-checker = write(STDOUT_FILENO,L,checker);
+checker = write(STDOUT_FILENO, L, checker);
 if (checker == -1)
 { return (0); }
 
