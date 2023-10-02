@@ -15,7 +15,7 @@ int files = 0;
 if (filename == NULL)
 { return (-1); }
 
-files = open(filename, O_WRONLY);
+files = open(filename, O_WRONLY | O_APPEND);
 if (files == -1)
 { return (-1); }
 
