@@ -10,8 +10,11 @@
 int main(int argc, char **argv)
 {
 
+if (argc != 2)
+{
 dprintf(2,"Error");
 exit(98);
+}
 
 return(0);
 }	
