@@ -38,6 +38,7 @@ writer = write(fileto, L, reader);/*write the content in buffer to fileto*/
 if (writer == -1)
 { free(L);
 Errors(2, argv[2]); }
+free(L);
 reader = read(filefrom, L, 1024); /*Reads the rest of the fromfile*/
 if (reader == -1)
 { Errors(1, argv[1]); }
