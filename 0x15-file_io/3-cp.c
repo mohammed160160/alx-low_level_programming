@@ -71,9 +71,8 @@ void filecloser(int checker, int file)
 void Errors(int checker, char *file)
 {
 if (checker == 1)
-	{ dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file);
-	exit(98); }
+	{ dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file); }
 else
-	{ dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file);
-	exit(99); }
+	{ dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file); }
+	exit(97 + checker); 
 }
