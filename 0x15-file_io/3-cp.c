@@ -10,7 +10,7 @@
 
 int main(int argc, char **argv)
 {
-ssize_t reader = 0,writer = 0;
+ssize_t reader = 0, writer = 0;
 int fileto = 0, filefrom = 0;
 char *L;
 
@@ -40,7 +40,6 @@ if (writer == -1)
 { free(L);
 Errors(2, argv[2]); }
 reader = read(filefrom, L, 1024); /*Reads the rest of the fromfile*/
-fileto = open(argv[2], O_WRONLY | O_APPEND);/*opensthefileatit'sapprend*/
 }
 
 free(L);
