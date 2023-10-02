@@ -40,6 +40,8 @@ if (writer == -1)
 { free(L);
 Errors(2, argv[2]); }
 reader = read(filefrom, L, 1024); /*Reads the rest of the fromfile*/
+if (reader == -1)
+{ Errors(1, argv[1]); }
 }
 
 free(L);
