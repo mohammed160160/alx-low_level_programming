@@ -59,7 +59,7 @@ void filecloser(int checker, int file)
 {
 	checker = close(file);
 	if (checker == -1)
-	{ dprintf(STDERR_FILENO, "Error: Can't close fd %i\n", file);
+	{ dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file);
 	exit(100); }
 }
 /**
