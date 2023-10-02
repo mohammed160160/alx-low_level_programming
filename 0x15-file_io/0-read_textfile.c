@@ -9,13 +9,28 @@
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-FILE *files;
-unsigned long int printed;
+char L[letters];
+unsigned long int checker = 0;
+unsigned long int R = 0;
 
-files = fopen(filename,"wr")
+if (filename == NULL)
+{ return (0); }
 
+int files = open(filename,O_RDONLY)
 
+if (files == -1)
+{ return (0); }
 
-fclose(files);
-return(printed);
+checker = read(files,L,letters);
+if (checker == -1)
+{ return (0); }
+
+R = checker;
+
+checker = write(STDOUT_FILENO,L,checker);
+if (checker == -1)
+{ return (0); }
+
+close(files);
+return (checker);
 }
