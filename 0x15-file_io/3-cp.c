@@ -10,7 +10,7 @@
 
 int main(int argc, char **argv)
 {
-ssize_t checker = 0; 
+ssize_t checker = 0;
 int fileto = 0, filefrom = 0;
 char *L;
 
@@ -19,32 +19,25 @@ if (argc != 3) /*Checks if there's 2 other arguments*/
 exit(97); }
 L = malloc(1024 * sizeof(char)); /*Creates a buffer of 1024*/
 if (L == NULL)
-{ dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
-exit(99); }
+{ Errors(2, argv[2]); }
 /********************************************************/
 filefrom = open(argv[1], O_RDONLY);
 if (filefrom == -1)
-{ Errors(1,argv[1]); }
+{ Errors(1, argv[1]); }
 
 checker = read(filefrom, L, 1024);
 if (checker == -1)
-{ Errors(1,argv[1]); }
+{ Errors(1, argv[1]); }
 /**********************************************************/
 fileto = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
 if (fileto == -1)
-{
-dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
-free(L);
-exit(99);
-}
+{ free(L);
+Errors(2, argv[2]); }
 
 checker = write(fileto, L, checker);
 if (checker == -1)
-{
-dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
-free(L);
-exit(99);
-}
+{ free(L);
+Errors(2, argv[2]); }
 /**********************************************************/
 free(L);
 filecloser(checker, filefrom);
