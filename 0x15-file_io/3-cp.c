@@ -10,7 +10,8 @@
 
 int main(int argc, char **argv)
 {
-int checker = 0, fileto = 0, filefrom = 0;
+ssize_t checker = 0, 
+int fileto = 0, filefrom = 0;
 char *L;
 L = malloc(1024 * sizeof(char));
 
