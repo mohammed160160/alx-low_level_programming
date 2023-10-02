@@ -20,7 +20,7 @@ exit(97); }
 
 L = malloc(1024 * sizeof(char)); /*Creates a buffer of 1024*/
 if (L == NULL)
-{ Errors(2, argv[2]); }
+{ Errors(1, argv[1]); }
 
 filefrom = open(argv[1], O_RDONLY); /*Opening the fromfile*/
 if (filefrom == -1)
