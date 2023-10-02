@@ -38,12 +38,10 @@ free(L);
 checker = close(filefrom);
 if (checker == -1)
 { dprintf(STDERR_FILENO, "Error: Can't read from %i", filefrom);
-exit(98); }
-
+exit(100); }
 checker = close(fileto);
 if (checker == -1)
 { dprintf(STDERR_FILENO, "Error: Can't close fd %i", fileto);
-exit(98); }
-
+exit(100); }
 return (0);
 }
