@@ -55,12 +55,14 @@ void check_elf(unsigned char *e_ident)
 int x;
 
 for (x = 0; x < 4; x++)
+{
+if (e_ident[x] != 127 && e_ident[x] != 'E' &&
+e_ident[x] != 'L' && e_ident[x] != 'F')
 	{
-	if (e_ident[x] != 127 && e_ident[x] != 'E' &&
-	e_ident[x] != 'L' && e_ident[x] != 'F')
-	{ dprintf(STDERR_FILENO, "Error: Not an ELF file\n");
-	exit(98); }
+	dprintf(STDERR_FILENO, "Error: Not an ELF file\n");
+	exit(98);
 	}
+}
 }
 /**
  * print_magic - Prints the magic numbers of an ELF header.
@@ -70,15 +72,20 @@ for (x = 0; x < 4; x++)
 void print_magic(unsigned char *e_ident)
 {
 int index;
-printf(" Magic:\t");
+
+printf("  Magic:   ");
 for (index = 0; index < EI_NIDENT; index++)
 {
 	printf("%02x", e_ident[index]);
 
 	if (index == EI_NIDENT - 1)
-	{ printf("\n"); }
+	{ 
+	printf("\n");
+	}
 	else
-	{ printf(" "); }
+	{
+	printf(" ");
+	}
 }
 }
 /**
@@ -87,7 +94,7 @@ for (index = 0; index < EI_NIDENT; index++)
  */
 void print_class(unsigned char *e_ident)
 {
-printf(" Class:\t");
+printf("  Class:                             ");
 
 switch (e_ident[EI_CLASS])
 	{
@@ -110,7 +117,7 @@ default:
  */
 void print_data(unsigned char *e_ident)
 {
-printf(" Data:\t");
+printf("  Data:                              ");
 switch (e_ident[EI_DATA])
 {
 case ELFDATANONE:
@@ -132,7 +139,7 @@ default:
  */
 void print_version(unsigned char *e_ident)
 {
-printf(" Version:\t%d", e_ident[EI_VERSION]);
+printf("  Version:                           %d");
 
 switch (e_ident[EI_VERSION])
 {
@@ -150,7 +157,7 @@ default:
  */
 void print_osabi(unsigned char *e_ident)
 {
-printf(" OS/ABI:\t");
+printf("  OS/ABI:                            ");
 
 switch (e_ident[EI_OSABI])
 {
@@ -194,7 +201,7 @@ default:
  */
 void print_abi(unsigned char *e_ident)
 {
-printf(" ABI Version:\t%d\n", e_ident[EI_ABIVERSION]);
+printf("  ABI Version:                       %d\n", e_ident[EI_ABIVERSION]);
 }
 /**
  * print_type - Prints the type of an ELF header.
@@ -205,7 +212,8 @@ void print_type(unsigned int e_type, unsigned char *e_ident)
 {
 if (e_ident[EI_DATA] == ELFDATA2MSB)
 { e_type >>= 8; }
-printf(" Type:\t");
+
+printf("  Type:                              ");
 
 switch (e_type)
 	{
@@ -235,7 +243,7 @@ default:
  */
 void print_entry(unsigned long int e_entry, unsigned char *e_ident)
 {
-printf(" Entry point address:\t");
+printf("  Entry point address:               ");
 
 if (e_ident[EI_DATA] == ELFDATA2MSB)
 {
