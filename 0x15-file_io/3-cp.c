@@ -39,7 +39,8 @@ Errors(99, argv[2]); }
 
 reader = read(filefrom, L, 1024); /*Reads the rest of the fromfile*/
 if (reader == -1)
-{ Errors(98, argv[1]); }
+{ free(L);
+Errors(98, argv[1]); }
 }
 
 free(L);
