@@ -24,11 +24,13 @@ if (node == NULL)
 node->n = n;
 node->next = NULL;
 node->prev = NULL;
-
 if (idx == 0)
 {
-node->next = *h;
-(*h)->prev = node;
+	if (*h != NULL)
+	{
+		node->next = *h;
+		(*h)->prev = node;
+	}
 *h = node;
 return (node);
 }
@@ -38,17 +40,15 @@ for (x = 0; x < idx - 1; x++)
 {
 	if (extra == NULL)
 	{
-	free(node);
-	return (NULL);
+		free(node);
+		return (NULL);
 	}
-	extra = extra->next;
+extra = extra->next;
 }
-
-if (extra->next != NULL)
-{ (extra->next)->prev = node; }
-node->next = extra->next;
-node->prev = extra;
-extra->next = node;
-
+	if (extra->next != NULL)
+	{ (extra->next)->prev = node; }
+	node->next = extra->next;
+	node->prev = extra;
+	extra->next = node;
 return (node);
 }
