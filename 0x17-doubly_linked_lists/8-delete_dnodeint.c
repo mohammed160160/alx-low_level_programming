@@ -26,12 +26,12 @@ if (select->next != NULL)
 (select->next)->prev = NULL;
 free(select);
 }
-return(1);
+return (1);
 }
 
 for (x = 0; x < index; x++)
 {
-select = select->next;	
+select = select->next;
 if (select == NULL)
 { return (-1); }
 }
@@ -39,9 +39,8 @@ if (select == NULL)
 if (select != NULL)
 {
 	(select->prev)->next = select->next;
-	
 	if (select->next != NULL)
-	{ 
+	{
 		(select->next)->prev = select->prev;
 	}
 free(select);
