@@ -20,8 +20,13 @@ return (NULL);
 }
 
 G->n = n;
-G->next = *head;
+G->next = NULL;
 G->prev = NULL;
+
+if (*head != NULL)
+{
+G->next = *head;
+}
 
 *head = G;
 
