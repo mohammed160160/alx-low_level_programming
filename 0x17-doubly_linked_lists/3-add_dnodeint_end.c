@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * add_nodeint_end - Adds a new node at the end of a linked list
+ * add_dnodeint_end - Adds a new node at the end of a linked list
  * @head:Pointer to the first structure(element in the list).
  * @n: The integer added to the list.
  * Return: The address of the new element.
@@ -33,5 +33,5 @@ else
 	extra->next = node;
 	node->prev = extra;
 }
-return(node);
+return (node);
 }
