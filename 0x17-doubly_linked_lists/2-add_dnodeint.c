@@ -26,6 +26,7 @@ G->prev = NULL;
 if (*head != NULL)
 {
 G->next = *head;
+(*head)->prev = G;
 }
 
 *head = G;
