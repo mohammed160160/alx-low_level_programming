@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * print_listint - prints all the elements of a double listint_t list
+ * print_dlistint - prints all the elements of a double listint_t list
  * @h:A pointer to the first element of the list
  * Return: The number of elements in the linked list
  */
