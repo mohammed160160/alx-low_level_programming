@@ -1,8 +1,8 @@
 #include "hash_tables.h"
 
 /**
- * main - check the code for
- *
+ * hash_table_print - printing a hash_table
+ * @ht:Hash table
  * Return: Always EXIT_SUCCESS.
  */
 
@@ -17,7 +17,7 @@ if (ht == NULL) /*checking parameters*/
 
 printf("{");
 
-for(size = 0; size < ht->size; size++)
+for (size = 0; size < ht->size; size++)
 {
 element = ht->array[size];
 
@@ -27,7 +27,7 @@ if (element != NULL)
 if (flag == 1)
 { printf(", "); }
 
-printf("'%s': '%s'",element->key,element->value);
+printf("'%s': '%s'", element->key, element->value);
 flag = 1;
 }
 
