@@ -21,14 +21,12 @@ for(size = 0; size < ht->size; size++)
 {
 element = ht->array[size];
 
-if (flag == 1)
-{
-printf(", ");
-flag = 0;
-}
-
 if (element != NULL)
 {
+
+if (flag == 1)
+{ printf(", "); }
+
 printf("'%s': '%s'",element->key,element->value);
 flag = 1;
 }
