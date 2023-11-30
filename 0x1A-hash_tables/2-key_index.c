@@ -1,8 +1,9 @@
 #include "hash_tables.h"
 
 /**
- * main - check the code for
- *
+ * key_index - check the code for
+ * @key: the string key value
+ * @size: The size of the hashtable
  * Return: Always EXIT_SUCCESS.
  */
 
