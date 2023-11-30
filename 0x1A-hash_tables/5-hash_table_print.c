@@ -8,6 +8,30 @@
 
 void hash_table_print(const hash_table_t *ht)
 {
+hash_node_t *element;
+unsigned long int size;
 
+if (ht == NULL) /*checking parameters*/
+{ return; }
 
+printf("{");
+
+for(size = 0; size < ht->size; size++)
+{
+element = ht->array[size];
+
+if (element != NULL)
+{
+printf("'%s': '%s'",element->key,element->value);
+
+if (element->next != NULL)
+{
+printf(", ");
+}
+
+}
+
+}
+
+printf("}\n");
 }
