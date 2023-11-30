@@ -8,31 +8,21 @@
 
 hash_table_t *hash_table_create(unsigned long int size)
 {
-int i = 0;
+hash_table_t *hash;
 
-if (size < 0)
-{ return (NULL); }
-
-hash_table_t *hash = (*hash_table_t) malloc(sizeof(hash_table_t));
+hash = (hash_table_t*) malloc(sizeof(hash_table_t));
 
 if (hash == NULL)
 { return (NULL); }
 
 hash->size = size;
+hash->array = (hash_node_t**) calloc(hash->size, sizeof(hash_node_t*));
 
-table->array = (**array) malloc(table->size, sizeof(*array));
-
-if (hash == NULL)
+if (hash->array == NULL)
 {
 free(hash);
 return (NULL);
 }
 
-for (i = 0; i < size; i++)
-{
-hash->array[i] = NULL;
-}
-
 return (hash);
-
 }
